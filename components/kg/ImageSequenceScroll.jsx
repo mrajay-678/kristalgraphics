@@ -1,0 +1,133 @@
+"use client";
+
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import RevealText from "@/components/animation/RevealText";
+import Image from "next/image";
+import expertiesLogo from "@/public/img/kg/experties-logo.svg";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const ImageSequenceScroll = () => {
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const frameCount = 176;
+
+    const currentFrame = (index) =>
+      `/img/kg/sequence/ezgif-frame-${String(index).padStart(3, "0")}.png`;
+
+    const images = [];
+
+    const imageSeq = {
+      frame: 0,
+    };
+
+    // PRELOAD IMAGES
+    for (let i = 1; i <= frameCount; i++) {
+      const img = new window.Image();
+
+      img.src = currentFrame(i);
+      img.style.objectFit = "contain";
+
+      images.push(img);
+    }
+
+    const canvas = canvasRef.current;
+
+    if (!canvas) return;
+
+    const context = canvas.getContext("2d");
+
+    if (!context) return;
+
+    canvas.width = 1980;
+    canvas.height = 310;
+
+    const render = () => {
+      const image = images[imageSeq.frame];
+
+      // IMPORTANT FIX
+      if (!image || !image.complete) return;
+
+      context.clearRect(0, 0, canvas.width, canvas.height);
+
+      context.drawImage(image, 0, 0, canvas.width, canvas.height);
+    };
+
+    // INITIAL RENDER
+    images[0].onload = () => {
+      render();
+    };
+
+    if (window.innerWidth >= 1024) {
+      const tween = gsap.to(imageSeq, {
+        frame: frameCount - 1,
+        snap: "frame",
+        ease: "none",
+
+        onUpdate: render,
+
+        scrollTrigger: {
+          trigger: ".canva-animation",
+          start: "00% 75%",
+          end: "100% 25%",
+          scrub: true,
+          pin: false,
+          markers: false,
+        },
+      });
+    }
+
+    return () => {
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
+  }, []);
+
+  return (
+    <section className="mid-animation pb-52">
+      <div>
+        <div className="flex flex-col md:flex-row justify-between mx-auto mxd-container grid-container">
+          <div className="flex flex-col md:w-2/4 gap-2 md:gap-5 pb-10 md:pb-52">
+            <div className="flex items-center gap-7">
+              <RevealText className="reveal-type">
+                <div className="md:text-[12vw] text-9xl leading-none font-bold font-heading">
+                  4
+                </div>
+              </RevealText>
+
+              <RevealText className="reveal-type">
+                <div className="font-light leading-none md:text-[4.5vw] text-7xl font-heading">
+                  decades of expertise
+                </div>
+              </RevealText>
+            </div>
+
+            <div className="pt-10 text-5xl font-body reveal-type md:w-10/12">
+              We're a full-service print and promo shop trusted by businesses
+              nationwide. Everything is handled in-house by an experienced crew
+              committed to quality you can count on and timelines you can trust.
+              Our specialty? Bulk orders.
+            </div>
+          </div>
+
+          <div className="text-end">
+            <Image
+              src={expertiesLogo}
+              alt="experties logo"
+              className="md:w-10/12 pt-20 md:pb-0 pb-24"
+            />
+          </div>
+        </div>
+      </div>
+
+      <canvas
+        ref={canvasRef}
+        className="mx-auto w-full hidden md:block canva-animation"
+      />
+    </section>
+  );
+};
+
+export default ImageSequenceScroll;

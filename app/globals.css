@@ -1,0 +1,128 @@
+@import "../public/css/main.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Heading";
+  src: url("../public/fonts/Glancyr-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Heading";
+  src: url("../public/fonts/Glancyr-Thin.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@theme {
+  --font-brand: "Heading", ui-sans-serif, system-ui;
+  --font-body: "Outfit", ui-sans-serif, system-ui;
+}
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: -moz-calc(var(--bs-gutter-x) * 0.5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: -moz-calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1320px;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes pulse-reverse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.service-animate-1 {
+  animation: pulse 2s infinite;
+  animation-delay: 0s;
+}
+
+.service-animate-2 {
+  animation: pulse-reverse 2s infinite;
+  animation-delay: 1s;
+}
+.home-page-footer {
+  background-image: url("/img/kg/homefooter.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 200px 0;
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .home-page-footer {
+    background: unset;
+    padding: 0;
+    margin-bottom: 100px;
+  }
+}

@@ -1,0 +1,31 @@
+.hero-03-headline__title {
+  font-size: 7vw;
+  color: #fff;
+
+  span {
+    font-weight: 300;
+  }
+}
+.m-0 {
+  margin: 0;
+}
+.font-40 {
+  font-size: 40px;
+}
+
+.hero-section-marquee .swiper-wrapper {
+  transition-timing-function: linear !important;
+  align-items: center;
+}
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+.brands-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+  align-items: center;
+}
+
+.brands-swiper.reverse .swiper-wrapper {
+  transition-timing-function: linear !important;
+  flex-direction: row-reverse;
+}
