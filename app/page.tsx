@@ -1,77 +1,120 @@
-import "@/public/css/kg.css";
-import Capabilities from "@/components/kg/Capabilities";
-import Hero from "@/components/kg/Hero";
-import MarqueeSlider from "@/components/kg/MarqueeSlider";
-import BrandsMarquee from "@/components/kg/BrandsMarquee";
-import ImageSequenceScroll from "@/components/kg/ImageSequenceScroll";
-import Instagram from "@/components/kg/Instagram";
+"use client";
+
 import Image from "next/image";
-import HomeFooter from "@/public/img/kg/homefooter.svg";
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Kristal Graphics",
-  description: "Kristal Graphics",
-};
-const brandImage = Array(18)
-  .fill(null)
-  .map((_, index) => {
-    return `brand-${index}.svg`;
-  });
+import Link from "next/link";
+import { useEffect } from "react";
 
-function shuffleArray(array: any) {
-  const shuffled = [...array]; // Don't mutate the original array
-
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const randomIndex = Math.floor(Math.random() * (i + 1));
-
-    [shuffled[i], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[i]];
-  }
-
-  return shuffled;
-}
-export default function HomeSoftwareDevelopmentCompanyPage() {
+export default function Page() {
+  useEffect(() => {
+    document.querySelector("#header")?.classList.add("hidden");
+    document.querySelector("#mxd-footer")?.classList.add("hidden");
+  }, []);
   return (
-    <>
-      <main id="mxd-page-content" className="mxd-page-content">
-        <Hero />
-        <MarqueeSlider
-          img="logo"
-          className="text-5xl"
-          items={[
-            "Fast timelines",
-            "Union-made quality",
-            "Built for scale",
-            "Zero compromises",
-            "Fast timelines",
-            "Union-made quality",
-            "Built for scale",
-            "Zero compromises",
-            "Fast timelines",
-            "Union-made quality",
-            "Built for scale",
-            "Zero compromises",
-          ]}
-        />
-        <Capabilities />
-        <ImageSequenceScroll />
-        <Instagram />
-        <section className="mt-52">
-          <div className="max-w-[1200px] w-full mx-auto mb-40 text-7xl xl:text-9xl text-black text-center leading-none font-light font-heading opacity-20">
-            Businesses that trust us
+    <main
+      className="min-h-screen bg-[#181818] bg-cover bg-center bg-no-repeat flex items-center justify-center px-6 py-16 text-white"
+      style={{
+        backgroundImage: "url('/img/coming-soon/pattern.png')",
+      }}
+    >
+      <div className="w-full text-center">
+        {/* Logo */}
+        <div className="relative mx-auto mb-10 flex h-[300px] w-[300px] items-center justify-center">
+          <Image
+            src="/img/coming-soon/circle.png"
+            alt="Circle"
+            width={300}
+            height={300}
+            className="animate-spin-slow"
+            priority
+          />
+
+          <Image
+            src="/img/coming-soon/logo.png"
+            alt="Kristal Graphics"
+            width={90}
+            height={90}
+            className="absolute w-32"
+            priority
+          />
+        </div>
+
+        {/* Heading */}
+        <p className="text-3xl text-white">We're getting a makeover!</p>
+
+        <p className="mx-auto mt-6 text-3xl leading-8 text-white">
+          While our brand and website are getting an update, our shop remains
+          fully operational.
+        </p>
+
+        <p className="mt-4 text-3xl text-white">
+          To browse through our promotional products catalog{" "}
+          <Link
+            href="https://www.promoplace.com/kristalgraphics"
+            target="_blank"
+            className="font-medium text-white underline transition hover:!text-[#FEBB12]"
+          >
+            Click Here
+          </Link>
+        </p>
+
+        {/* Address */}
+        <div className="mt-14 space-y-5">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Image
+              src="/img/coming-soon/location_on.svg"
+              alt="Location"
+              width={20}
+              height={20}
+              className="w-10"
+            />
+
+            <span className="text-white">
+              9607 Canoga Ave, Chatsworth, CA 91311, United States
+            </span>
           </div>
-        </section>
-        <BrandsMarquee direction="rtl" items={shuffleArray(brandImage)} />
-        <BrandsMarquee
-          direction="ltr"
-          items={shuffleArray(brandImage.reverse())}
-        />
-        <div className="max-w-[1200px] w-full mx-auto font-heading home-page-footer">
-          <div className="md:px-40 text-4xl md:text-7xl text-center">
-            Trusted by unions, local businesses, national brands, event planners
-            and companies that care about quality.
+
+          <p className="text-white">Shop Hours : Monday – Friday | 9AM – 5PM</p>
+        </div>
+
+        {/* Contact */}
+        <div className="mt-12 flex flex-col items-center justify-center gap-6 md:flex-row">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/img/coming-soon/phone_in_talk.svg"
+              alt="Phone"
+              width={20}
+              height={20}
+              className="w-10"
+            />
+
+            <Link
+              href="tel:+18183427822"
+              className="transition hover:text-[#FEBB12]"
+            >
+              +1 (818) 342-7822
+            </Link>
+          </div>
+
+          <span className="hidden md:block text-white/40">|</span>
+
+          <div className="flex items-center gap-3">
+            <Image
+              src="/img/coming-soon/email.svg"
+              alt="Email"
+              width={20}
+              height={20}
+              className="w-10"
+            />
+
+            <Link
+              href="mailto:info@kristalgraphics.net"
+              className="transition hover:text-[#FEBB12]"
+            >
+              info@kristalgraphics.net
+            </Link>
           </div>
         </div>
-      </main>
-    </>
+      </div>
+    </main>
   );
 }
