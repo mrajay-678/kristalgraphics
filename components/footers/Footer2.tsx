@@ -14,7 +14,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
       <FooterMobile />
 
       <div className="hidden md:block">
-        <div className="md:w-2/4 ms-auto px-8 md:px-32">
+        <div className="md:w-2/4 ms-auto pb-6 md:px-32">
           <Image
             src={blacknimonics}
             alt="Black Monics"
@@ -22,7 +22,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
           />
         </div>
         {/* Main Content */}
-        <div className="relative mx-auto grid-container py-8 md:py-24 px-8 md:px-32 gap-16 pb-20  lg:flex-row lg:items-end lg:gap-10 bg-[#181818]">
+        <div className="relative mx-auto grid-container pt-10 px-8 md:px-32 gap-16 pb-20  lg:flex-row lg:items-end lg:gap-10 bg-[#181818]">
           {/* Left Content */}
           <div className="flex w-full justify-between items-end">
             <h2 className="font-heading text-4xl font-light leading-normal text-white w-6/12 sm:text-5xl md:text-6xl lg:text-[5vw]">
@@ -39,9 +39,11 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
 
           {/* Right Content */}
           <div className="flex w-full items-start lg:items-end flex-col gap-6 lg:flex-row lg:justify-between pt-20 lg:pt-72">
-            <h3 className="font-heading font-medium text-white sm:text-7xl md:text-7xl lg:text-[5vw]">
-              Get a <span className="text-[#FEBB12]">quote!</span>
-            </h3>
+            <Link href={"/get-a-quote"}>
+              <h3 className="font-heading font-medium text-white sm:text-7xl md:text-7xl lg:text-[5vw]">
+                Get a <span className="hover:text-[#FEBB12]">quote!</span>
+              </h3>
+            </Link>
             {/* Address */}
             <div className="flex md:flex-wrap flex-col lg:flex-row gap-5 md:w-6/12 justify-between md:items-end">
               <div className="flex md:w-3/12 flex-col items-center gap-2">
@@ -61,13 +63,15 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                   Address:
                 </h4>
 
-                <p className="font-body text-2xl leading-relaxed text-white/90 sm:text-lg lg:text-3xl">
-                  9607 Canoga Ave,
-                  <br />
-                  Woodland Hills,
-                  <br />
-                  CA 91367
-                </p>
+                <Link href={"https://maps.app.goo.gl/yHy8f9wtxefpsKcH8"}>
+                  <p className="font-body text-2xl leading-relaxed text-white/90 sm:text-lg lg:text-3xl">
+                    9607 Canoga Ave,
+                    <br />
+                    Woodland Hills,
+                    <br />
+                    CA 91367
+                  </p>
+                </Link>
               </div>
 
               {/* Contact */}
@@ -109,12 +113,12 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                 <div className="w-3/12">
                   <ul>
                     <li className="pb-2 text-3xl">
-                      <Link href="#" className="text-white">
+                      <Link href="/" className="text-white">
                         Home
                       </Link>
                     </li>
                     <li className="pb-2 text-3xl">
-                      <Link href="#" className="text-white">
+                      <Link href="/service" className="text-white">
                         Services
                       </Link>
                     </li>
@@ -125,12 +129,15 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                 <div className="w-3/12">
                   <ul>
                     <li className="pb-2 text-3xl">
-                      <Link href="#" className="text-white">
+                      <Link href="/about-us" className="text-white">
                         About Us
                       </Link>
                     </li>
                     <li className="pb-2 text-3xl">
-                      <Link href="#" className="text-white">
+                      <Link
+                        href="https://www.promoplace.com/kristalgraphics"
+                        className="text-white"
+                      >
                         Promo Products
                       </Link>
                     </li>
