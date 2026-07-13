@@ -21048,3 +21048,26 @@ html {
     background-image: none !important;
   }
 }
+.footer-logo-1 {
+  width: 100%;
+}
+.footer-logo-2 {
+  width: 55%;
+}
+
+@media (min-width: 1600px) {
+  .footer-logo-1 {
+    width: 50%;
+  }
+  .footer-logo-2 {
+    width: 40%;
+  }
+}
+@media (max-width: 768px) {
+  .footer-logo-1 {
+    width: 100%;
+  }
+  .footer-logo-2 {
+    width: 100%;
+  }
+}

@@ -43,15 +43,15 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
               Get a <span className="text-[#FEBB12]">quote!</span>
             </h3>
             {/* Address */}
-            <div className="flex md:flex-wrap flex-col lg:flex-row gap-5 lg:w-5/12 justify-between md:items-end">
+            <div className="flex md:flex-wrap flex-col lg:flex-row gap-5 md:w-6/12 justify-between md:items-end">
               <div className="flex md:w-3/12 flex-col items-center gap-2">
                 <Image
-                  className="w-4/4 md:w-9/12"
+                  className="footer-logo-1"
                   src={unionFooter}
                   alt="Union Footer"
                 />
                 <Image
-                  className="w-4/4 md:w-5/12"
+                  className="footer-logo-2"
                   src={sageFooter}
                   alt="Sage Footer"
                 />
@@ -95,7 +95,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
           </div>
           <div className="mx-auto pt-20 px-0">
             <div className="flex flex-col gap-6 border-t border-white/30 pt-8 md:flex-row md:items-end md:justify-between">
-              <div className="font-body md:w-6/12 text-sm text-white/80 sm:text-2xl lg:text-xl">
+              <div className="font-body text-sm text-white sm:text-2xl lg:text-xl">
                 <p className="text-white text-3xl pb-5">
                   Privacy Policy | Terms of Service
                 </p>
@@ -104,7 +104,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                 </p>
               </div>
 
-              <div className="flex flex-wrap lg:flex-row gap-5 lg:w-5/12 justify-between items-end">
+              <div className="flex flex-wrap lg:flex-row gap-5 max-w-6/12 md:w-6/12 justify-between items-end">
                 <div className="w-3/12 flex flex-col items-center gap-2 opacity-0"></div>
                 <div className="w-3/12">
                   <ul>
