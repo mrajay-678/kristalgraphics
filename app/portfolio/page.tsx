@@ -3,11 +3,12 @@ import equipment1 from "@/public/img/kg/portfolio/equipement-58.svg";
 import equipment2 from "@/public/img/kg/portfolio/equipement-60.svg";
 import equipment3 from "@/public/img/kg/portfolio/equipement-61.svg";
 import equipment4 from "@/public/img/kg/portfolio/equipement-62.svg";
-import equipment5 from "@/public/img/kg/portfolio/equipement-63.svg";
 import equipment6 from "@/public/img/kg/portfolio/equipement-64.svg";
 import equipment7 from "@/public/img/kg/portfolio/equipement-69.svg";
 import equipment8 from "@/public/img/kg/portfolio/equipement-59.svg";
+import { seoMetadata } from "@/lib/seo";
 
+export const metadata = seoMetadata.portfolio;
 type BentoItem = {
   id: string;
   title: string;

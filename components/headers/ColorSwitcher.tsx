@@ -12,7 +12,8 @@ export default function ThemeSwitcherButton({}) {
     return "light";
   });
   useEffect(() => {
-    setShowSwitcher(true);
+    const frame = window.requestAnimationFrame(() => setShowSwitcher(true));
+    return () => window.cancelAnimationFrame(frame);
   }, []);
 
   useEffect(() => {

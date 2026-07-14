@@ -609,7 +609,7 @@ export default function ContactForm() {
             />
 
             <span>
-              I agree with the site's privacy policy
+              I agree with the site&apos;s privacy policy
               <span className="ml-1 text-[#FEBB12]">*</span>
             </span>
           </label>

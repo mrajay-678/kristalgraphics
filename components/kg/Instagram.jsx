@@ -30,7 +30,7 @@ export default function Instagram() {
     <section className="mxd-container grid-container py-16 md:py-24">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-end">
         <h2 className="lg:w-6/12 font-heading text-7xl">
-          We're highly <br />
+          We&apos;re highly <br />
           (almost incurably) social!
         </h2>
 

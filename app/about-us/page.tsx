@@ -4,6 +4,8 @@ import aboutOne from "@/public/img/kg/about-1.png";
 import aboutTwo from "@/public/img/kg/about-2.png";
 import Approch from "@/components/common/Approch";
 import Teams from "@/components/kg/Teams";
+import { seoMetadata } from "@/lib/seo";
+
 export const page = () => {
   return (
     <main className="bg-[#FEFEFE]">
@@ -15,9 +17,9 @@ export const page = () => {
           <Image src={aboutOne} alt="Murtuza" className="object-cover h-3/4" />
           <div className="pt-20">
             <p className="text-5xl font-thin font-body">
-              For four decades, we've partnered with businesses, event planners,
+              For four decades, we&apos;ve partnered with businesses, event planners,
               agencies, and brands who need reliable quality and honest
-              timelines. With an in-house design team for support, we don't just
+              timelines. With an in-house design team for support, we don&apos;t just
               print what you ask for, we guide you to what actually works for
               your project, budget, and goals.
             </p>
@@ -50,3 +52,5 @@ export const page = () => {
 };
 
 export default page;
+
+export const metadata = seoMetadata.about;

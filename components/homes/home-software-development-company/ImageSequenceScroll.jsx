@@ -124,7 +124,7 @@ const ImageSequenceScroll = () => {
             </div>
 
             <RevealText className="pt-10 text-5xl font-body reveal-type">
-              We're a full-service print and promo shop in
+              We&apos;re a full-service print and promo shop in
               Chatsworth, California. We handle it all
               in-house with an experienced crew,
               committed to delivering quality that lasts

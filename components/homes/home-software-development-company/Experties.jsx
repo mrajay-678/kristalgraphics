@@ -14,7 +14,7 @@ export const Experties = () => {
                         <div className="font-light leading-none text-[4.5vw] font-heading reveal-type ">decades of expertise</div>
                     </RevealText>
                 </div>
-                <RevealText className="pt-10 text-5xl font-body reveal-type">We're a full-service print and promo shop in Chatsworth, California. We handle it all in-house with an experienced crew, committed to delivering quality that lasts and timelines you can actually count on</RevealText>
+                <RevealText className="pt-10 text-5xl font-body reveal-type">We&apos;re a full-service print and promo shop in Chatsworth, California. We handle it all in-house with an experienced crew, committed to delivering quality that lasts and timelines you can actually count on</RevealText>
             </div>
             <div className='text-end'>
                 <svg width="441" height="440" viewBox="0 0 441 440" fill="none" xmlns="http://www.w3.org/2000/svg">

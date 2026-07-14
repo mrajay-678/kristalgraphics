@@ -6,15 +6,15 @@ export const ContactDetails = () => {
       <div className="text-5xl font-body text-start">
         <h2 className="font-heading">What Happens Next?</h2>
         <p className="pt-10 text-3xl">
-          Within 24 hours on a weekday: We'll review your project details and
+          Within 24 hours on a weekday: We&apos;ll review your project details and
           send you a detailed quote with pricing, timeline, and next steps.
         </p>
         <p className="pt-10 text-3xl">
-          If we need clarification: We'll reach out via email or
+          If we need clarification: We&apos;ll reach out via email or
         </p>
         <p className="pt-10 text-3xl">
           phone to discuss your project in more detail. Design files not ready?
-          No problem. We'll guide you through the artwork preparation process or
+          No problem. We&apos;ll guide you through the artwork preparation process or
           offer our design services.
         </p>
       </div>

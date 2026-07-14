@@ -40,8 +40,8 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
           {/* Right Content */}
           <div className="flex w-full items-start lg:items-end flex-col gap-6 lg:flex-row lg:justify-between pt-20 lg:pt-72">
             <Link href={"/get-a-quote"}>
-              <h3 className="font-heading font-medium text-white sm:text-7xl md:text-7xl lg:text-[5vw] group">
-                Get a <span className="group-hover:text-[#FEBB12]">quote!</span>
+              <h3 className="font-heading font-medium text-white sm:text-7xl md:text-7xl lg:text-[5vw] hover:text-[#FEBB12]">
+                Get a <span className="">quote!</span>
               </h3>
             </Link>
             {/* Address */}

@@ -12,7 +12,7 @@ export const Instagram = () => {
         {/* Left */}
         <div className="w-full lg:w-6/12">
           <h2 className="font-heading text-4xl leading-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            We're highly <br />
+            We&apos;re highly <br />
             (almost incurably) social!
           </h2>
         </div>
@@ -21,7 +21,7 @@ export const Instagram = () => {
         <div className="w-full lg:w-6/12">
           <p className="font-body text-xl leading-relaxed sm:text-2xl md:text-3xl lg:text-5xl">
             Follow us for behind-the-scenes production, service
-            spotlights, and proof that print isn't dead it's just
+            spotlights, and proof that print isn&apos;t dead it&apos;s just
             getting better.
           </p>
         </div>

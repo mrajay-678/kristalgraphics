@@ -5,20 +5,16 @@ import MarqueeSlider from "@/components/kg/MarqueeSlider";
 import BrandsMarquee from "@/components/kg/BrandsMarquee";
 import ImageSequenceScroll from "@/components/kg/ImageSequenceScroll";
 import Instagram from "@/components/kg/Instagram";
-import Image from "next/image";
-import HomeFooter from "@/public/img/kg/homefooter.svg";
-import { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Kristal Graphics",
-  description: "Kristal Graphics",
-};
+import { seoMetadata } from "@/lib/seo";
+
+export const metadata = seoMetadata.home;
 const brandImage = Array(18)
   .fill(null)
   .map((_, index) => {
     return `brand-${index}.svg`;
   });
 
-function shuffleArray(array: any) {
+function shuffleArray(array: string[]) {
   const shuffled = [...array]; // Don't mutate the original array
 
   for (let i = shuffled.length - 1; i > 0; i--) {
