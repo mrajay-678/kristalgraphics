@@ -40,8 +40,8 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
           {/* Right Content */}
           <div className="flex w-full items-start lg:items-end flex-col gap-6 lg:flex-row lg:justify-between pt-20 lg:pt-72">
             <Link href={"/get-a-quote"}>
-              <h3 className="font-heading font-medium text-white sm:text-7xl md:text-7xl lg:text-[5vw]">
-                Get a <span className="hover:text-[#FEBB12]">quote!</span>
+              <h3 className="font-heading font-medium text-white sm:text-7xl md:text-7xl lg:text-[5vw] group">
+                Get a <span className="group-hover:text-[#FEBB12]">quote!</span>
               </h3>
             </Link>
             {/* Address */}
@@ -113,12 +113,15 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                 <div className="w-3/12">
                   <ul>
                     <li className="pb-2 text-3xl">
-                      <Link href="/" className="text-white">
+                      <Link href="/" className="text-white hover:underline">
                         Home
                       </Link>
                     </li>
                     <li className="pb-2 text-3xl">
-                      <Link href="/service" className="text-white">
+                      <Link
+                        href="/service"
+                        className="text-white hover:underline"
+                      >
                         Services
                       </Link>
                     </li>
@@ -129,14 +132,17 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                 <div className="w-3/12">
                   <ul>
                     <li className="pb-2 text-3xl">
-                      <Link href="/about-us" className="text-white">
+                      <Link
+                        href="/about-us"
+                        className="text-white hover:underline"
+                      >
                         About Us
                       </Link>
                     </li>
                     <li className="pb-2 text-3xl">
                       <Link
                         href="https://www.promoplace.com/kristalgraphics"
-                        className="text-white"
+                        className="text-white hover:underline"
                       >
                         Promo Products
                       </Link>
