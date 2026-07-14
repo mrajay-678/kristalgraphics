@@ -101,7 +101,7 @@ function SuccessModal({ onClose }) {
       aria-modal="true"
       aria-labelledby="quote-success-title"
     >
-      <div className="relative flex w-full max-w-5xl flex-col gap-8 rounded-lg bg-[#181818] p-8 font-body text-white shadow-2xl md:flex-row md:items-center md:p-16">
+      <div className="relative flex w-full max-w-7xl flex-col gap-8 rounded-lg bg-[#181818] p-8 font-body text-white shadow-2xl md:flex-row md:items-center md:p-20">
         <button
           aria-label="Close success message"
           className="absolute right-5 top-5 text-white hover:text-white md:right-10 md:top-10"
