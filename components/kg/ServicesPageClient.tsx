@@ -7,7 +7,7 @@ import { services } from "@/data/kg/services";
 
 const ServicesPageClient = () => {
   return (
-    <main className="pt-60">
+    <main className="pt-32 md:pt-60">
       <div className="w-11/12 mx-auto">
         <ServiceHero />
         <div className="relative font-inter antialiased">

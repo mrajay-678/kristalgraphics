@@ -699,6 +699,11 @@ html.lenis body {
 .mxd-section.padding-grid-pre-mtext {
   padding-bottom: 11.3rem;
 }
+@media only screen and (max-width: 768px) {
+  .mxd-section.padding-grid-pre-mtext {
+    padding-bottom: 2.6rem;
+  }
+}
 .mxd-section.padding-pinned-img-pre-mtext {
   padding-bottom: 10.4rem;
 }

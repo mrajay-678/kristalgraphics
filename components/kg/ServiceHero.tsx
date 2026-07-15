@@ -24,27 +24,27 @@ const marqueeItems = [
 ];
 const ServiceHero = () => {
   return (
-    <section className="pt-24 md:pt-32 pb-24 md:pb-52 text-center overflow-hidden">
+    <section className="pt-0 md:pt-32 pb-24 md:pb-52 text-center overflow-hidden">
       <div className="relative inline-block mx-auto">
         <Image
           src={serviceOne}
           alt="Customise Your Print"
-          className="absolute w-56 md:w-64 lg:w-[60%] -top-12 md:-top-28 -left-16 md:-left-[40%] service-animate-1"
+          className="absolute w-80 md:w-64 lg:w-[60%] top-40 md:-top-28 -left-16 md:-left-[40%] service-animate-1"
         />
 
         <Image
           src={serviceTwo}
           alt="Customise Your Print"
-          className="absolute w-32 md:w-48 lg:w-[40%] -top-10 md:-top-28 -right-8 md:-right-64 -z-10 service-animate-2"
+          className="absolute w-60 md:w-48 lg:w-[40%] top-36 md:-top-28 -right-8 md:-right-64 -z-10 service-animate-2"
         />
 
-        <h1 className="font-heading text-7x lg:text-9xl leading-[1.1]">
+        <h1 className="font-heading text-9xl lg:text-9xl leading-[1.1]">
           We print it all.
         </h1>
       </div>
 
       <div className="mt-6 flex flex-col md:flex-row items-center justify-center gap-4 lg:gap-0">
-        <div className="font-heading text-5xl lg:text-7xl leading-tight">
+        <div className="font-heading text-7xl lg:text-7xl leading-tight">
           Customise your
         </div>
 
@@ -63,7 +63,7 @@ const ServiceHero = () => {
           >
             {marqueeItems.map((item, index) => (
               <SwiperSlide key={index} style={{ width: "auto" }}>
-                <p className="font-heading text-5xl lg:text-7xl py-2 md:py-3 px-3 leading-tight whitespace-nowrap">
+                <p className="font-heading text-7xl lg:text-7xl py-2 md:py-3 px-3 leading-tight whitespace-nowrap">
                   {item} ✦
                 </p>
               </SwiperSlide>
@@ -71,7 +71,7 @@ const ServiceHero = () => {
           </Swiper>
         </div>
 
-        <div className="font-heading text-5xl lg:text-7xl leading-tight">
+        <div className="font-heading text-7xl lg:text-7xl leading-tight">
           with us!
         </div>
       </div>
