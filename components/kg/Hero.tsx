@@ -70,18 +70,6 @@ export default function Hero() {
                     </div>
                   </div>
                 </SwiperSlide>
-                {/* <SwiperSlide className="lg:!w-3/12 h-full">
-                  <div className="justify-center marquee__item one-line">
-                    <div className="hero-03-marquee__image">
-                      <Image
-                        className="object-cover h-full mxd-move"
-                        alt="Image"
-                        src={marquee2}
-                        priority
-                      />
-                    </div>
-                  </div>
-                </SwiperSlide> */}
                 <SwiperSlide className="lg:!w-3/12 h-full">
                   <div className="justify-center marquee__item one-line">
                     <div className="hero-03-marquee__image">
@@ -132,7 +120,7 @@ export default function Hero() {
                   <div className="justify-center marquee__item one-line">
                     <div className="hero-03-marquee__image">
                       <Image
-                        className="object-cover h-full p-20 mxd-move"
+                        className="object-cover h-full p-10 mxd-move"
                         alt="Image"
                         src={marquee4}
                         priority
