@@ -121,7 +121,7 @@ function SuccessModal({ onClose }) {
       aria-modal="true"
       aria-labelledby="quote-success-title"
     >
-      <div className="relative flex w-full max-w-7xl flex-col gap-8 rounded-lg bg-[#181818] p-8 font-body text-white shadow-2xl md:flex-row md:items-center md:p-20">
+      <div className="relative flex w-3/4 2xl:w-3/6 max-w-[800px] flex-col rounded-lg bg-[#181818] p-8 font-body text-white shadow-2xl md:flex-row md:items-center md:p-20 md:pl-0">
         <button
           aria-label="Close success message"
           className="absolute right-5 top-5 text-white hover:text-white md:right-10 md:top-10"
@@ -134,27 +134,29 @@ function SuccessModal({ onClose }) {
           <Image
             src={checkCircle}
             alt="Success"
-            className="mx-auto h-44 w-44 md:h-3/4 md:w-3/4"
+            width={501}
+            height={520}
+            className="mx-auto md:w-3/4 "
           />
         </div>
-        <div className="w-full md:w-1/2 md:pl-10">
+        <div className="w-full md:w-1/2 ">
           <div
             id="quote-success-title"
             className="font-heading text-5xl leading-none text-[#FEBB12] md:text-7xl"
           >
             We&apos;re on it!
           </div>
-          <p className="mt-5 text-xl leading-snug text-white md:text-2xl">
+          <p className="mt-10 text-xl leading-snug text-white md:text-3xl">
             Thanks for reaching out!
           </p>
-          <p className="mt-5 text-xl leading-snug text-white md:text-2xl">
+          <p className="mt-10 text-xl leading-snug text-white md:text-3xl">
             We&apos;ll review your project details and send you a quote within
             24 hours, usually sooner.
           </p>
-          <p className="mt-4 text-xl text-white md:text-2xl">
+          <p className="mt-10 text-xl text-white md:text-3xl">
             Check your email (and spam folder, just in case) for our response.
           </p>
-          <p className="mt-4 text-xl text-white md:text-2xl">
+          <p className="mt-10 text-xl text-white md:text-3xl">
             Need it urgently? Call us at{" "}
             <a
               className="font-semibold text-white underline underline-offset-2"
@@ -697,7 +699,7 @@ export default function ContactForm() {
           <FieldError message={submitError} />
         </div>
       </form>
-      {showSuccess && <SuccessModal onClose={() => setShowSuccess(false)} />}
+      {!showSuccess && <SuccessModal onClose={() => setShowSuccess(false)} />}
     </>
   );
 }
