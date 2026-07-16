@@ -2,9 +2,10 @@ import { Resend } from "resend";
 import { NextResponse } from "next/server";
 import { productOptionsByService, serviceOptions } from "@/data/quote";
 
-const QUOTE_RECIPIENT = process.env.QUOTE_TO_EMAIL || "theajay678@gmail.com";
+const QUOTE_RECIPIENT =
+  process.env.QUOTE_TO_EMAIL || "info@kristalgraphics.net";
 const QUOTE_FROM =
-  process.env.QUOTE_FROM_EMAIL || "Kristal Graphics <onboarding@resend.dev>";
+  process.env.QUOTE_FROM_EMAIL || "Kristal Graphics <info@kristalgraphics.net>";
 
 export const runtime = "nodejs";
 
@@ -109,7 +110,7 @@ function buildEmail(body) {
       <div style="margin:0;padding:24px;background:#f6f6f6;font-family:Arial,sans-serif;color:#111111;">
         <div style="max-width:720px;margin:0 auto;background:#ffffff;border-radius:10px;overflow:hidden;border:1px solid #e8e8e8;">
           <div style="padding:24px 28px;background:#111111;color:#ffffff;">
-            <p style="margin:0 0 6px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#FEBB12;">Kristal Graphics</p>
+            <img src="https://www.kristalgraphics.net/img/kg/email-logo.png" alt="Kristal Graphics" style="height:50px;" />
             <h1 style="margin:0;font-size:28px;line-height:1.2;">New Quote Request</h1>
           </div>
           <table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;">
@@ -178,7 +179,7 @@ Kristal Graphics Team`,
 
                 <p>
                   Our team will review your requirements and get back to you within
-                  <strong>24 hours</strong>.
+                  <strong>3 business days*</strong>.
                 </p>
 
                 <br/>
