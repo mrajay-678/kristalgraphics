@@ -6,27 +6,40 @@ export const ContactDetails = () => {
       <div className="text-5xl font-body text-start">
         <h2 className="font-heading">What Happens Next?</h2>
         <p className="pt-10 text-3xl">
-          Within 24 hours on a weekday: We&apos;ll review your project details
-          and send you a detailed quote with pricing, timeline, and next steps.
+          After reviewing your requirements, we will send you an accurate quote
+          with pricing, timeline, and next steps. We usually reply within 24-48
+          hours on a weekday. If we need clarification, we'll reach out via
+          email or phone to discuss your project in more detail.
         </p>
         <p className="pt-10 text-3xl">
-          If we need clarification: We&apos;ll reach out via email or phone to
-          discuss your project in more detail. Design files not ready? No
-          problem. We&apos;ll guide you through the artwork preparation process
-          or offer our design services.
+          Design files not ready? No problem. We'll guide you through the
+          artwork preparation process or offer our design services.
         </p>
       </div>
       <div className="text-5xl font-body text-start pt-32">
         <h2 className="font-heading">Prefer to talk directly?</h2>
         <div className="pt-20 flex flex-col md:flex-row gap-20 text-3xl">
           <div className="md:w-1/2">
-            <p>
-              <b>Call us: &nbsp;</b>(818) 342-7822
-            </p>
-            <p>Monday – Friday, 9am – 5pm PST</p>
+            <b>Call us: &nbsp;</b> <br />
+            <Link
+              href="tel:+18183427822"
+              className="block font-body text-3xl  transition hover:text-[#FEBB12]"
+            >
+              +1 (818) 342-7822
+            </Link>{" "}
+            Monday – Friday, 9am – 5pm PST
           </div>
           <div className="md:w-1/2">
-            <b>Visit us:</b> <br /> 9607 Canoga Ave, <br /> Chatsworth, CA 91311
+            <b>Visit us:</b> <br />{" "}
+            <Link href={"https://maps.app.goo.gl/yHy8f9wtxefpsKcH8"}>
+              <p className="font-body text-2xl leading-relaxed sm:text-lg lg:text-3xl">
+                9607 Canoga Ave,
+                <br />
+                Woodland Hills,
+                <br />
+                CA 91367
+              </p>
+            </Link>
           </div>
         </div>
       </div>

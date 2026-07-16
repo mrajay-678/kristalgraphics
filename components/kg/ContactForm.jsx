@@ -4,8 +4,8 @@ import { useMemo, useState } from "react";
 import {
   Building2,
   Calendar,
-  CheckCircle2,
   Ear,
+  FileUp,
   Hourglass,
   Layers,
   Mail,
@@ -29,6 +29,25 @@ const ERROR_EMAIL = "Email doesn't look right. Double-check it?";
 const ERROR_SUBMIT =
   "Something went wrong. Try again or email us directly on info@kristalgraphics.net";
 const ERROR_PRIVACY = "Please accept the Privacy Policy before submitting.";
+const ERROR_FILE_SIZE = "Artwork file must be 10 MB or smaller.";
+const ERROR_FILE_TYPE = "Preferred file format: PDF";
+
+const MAX_ARTWORK_FILE_SIZE = 10 * 1024 * 1024;
+const ARTWORK_FILE_ACCEPT =
+  ".ai,.pdf,.eps,.svg,.psd,.png,.jpg,.jpeg,.tif,.tiff,.zip";
+const ARTWORK_FILE_EXTENSIONS = [
+  "ai",
+  "pdf",
+  "eps",
+  "svg",
+  "psd",
+  "png",
+  "jpg",
+  "jpeg",
+  "tif",
+  "tiff",
+  "zip",
+];
 
 const initialForm = {
   name: "",
@@ -45,6 +64,7 @@ const initialForm = {
   rushService: false,
 
   artwork: [],
+  artworkFile: null,
 
   hearAbout: "",
 
@@ -172,6 +192,16 @@ function validateForm(form) {
 
   if (form.artwork.length === 0) nextErrors.artwork = ERROR_REQUIRED;
 
+  if (form.artworkFile) {
+    const extension = form.artworkFile.name.split(".").pop()?.toLowerCase();
+
+    if (form.artworkFile.size > MAX_ARTWORK_FILE_SIZE) {
+      nextErrors.artworkFile = ERROR_FILE_SIZE;
+    } else if (!extension || !ARTWORK_FILE_EXTENSIONS.includes(extension)) {
+      nextErrors.artworkFile = ERROR_FILE_TYPE;
+    }
+  }
+
   if (!form.privacyPolicy) nextErrors.privacyPolicy = ERROR_PRIVACY;
 
   return nextErrors;
@@ -183,6 +213,7 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [uploadInputKey, setUploadInputKey] = useState(0);
 
   const productOptions = useMemo(() => {
     return productOptionsByService[form.serviceType] || [];
@@ -200,6 +231,17 @@ export default function ContactForm() {
       [name]: "",
       ...(name === "privacyPolicy" ? { privacyPolicy: "" } : {}),
     }));
+    setSubmitError("");
+  };
+
+  const updateArtworkFile = (event) => {
+    const file = event.target.files?.[0] || null;
+
+    setForm((prev) => ({
+      ...prev,
+      artworkFile: file,
+    }));
+    setErrors((prev) => ({ ...prev, artworkFile: "" }));
     setSubmitError("");
   };
 
@@ -243,28 +285,28 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      const payload = {
-        name: form.name,
-        email: form.email,
-        phone: form.phone,
-        companyType: form.companyType,
-        serviceType: form.serviceType,
-        products: form.products,
-        quantity: form.quantity,
-        deadline: form.deadline,
-        rushService: form.rushService,
-        artwork: form.artwork,
-        hearAbout: form.hearAbout,
-        notes: form.notes,
-        privacyPolicy: form.privacyPolicy,
-      };
+      const payload = new FormData();
+      payload.append("name", form.name);
+      payload.append("email", form.email);
+      payload.append("phone", form.phone);
+      payload.append("companyType", form.companyType);
+      payload.append("serviceType", form.serviceType);
+      payload.append("products", JSON.stringify(form.products));
+      payload.append("quantity", form.quantity);
+      payload.append("deadline", form.deadline);
+      payload.append("rushService", String(form.rushService));
+      payload.append("artwork", JSON.stringify(form.artwork));
+      payload.append("hearAbout", form.hearAbout);
+      payload.append("notes", form.notes);
+      payload.append("privacyPolicy", String(form.privacyPolicy));
+
+      if (form.artworkFile) {
+        payload.append("artworkFile", form.artworkFile);
+      }
 
       const response = await fetch("/api/quote", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
+        body: payload,
       });
 
       if (!response.ok) {
@@ -273,6 +315,7 @@ export default function ContactForm() {
       }
 
       setForm(initialForm);
+      setUploadInputKey((current) => current + 1);
       setShowSuccess(true);
     } catch (error) {
       console.error("Quote email failed:", error);
@@ -539,6 +582,36 @@ export default function ContactForm() {
             ))}
           </div>
           <FieldError message={errors.artwork} />
+        </div>
+
+        {/* FILE UPLOAD */}
+        <div className="w-full">
+          <label className="relative block">
+            <FileUp
+              className="absolute left-0 top-5 h-10 w-10 text-black"
+              strokeWidth={1.8}
+            />
+
+            <span className="pl-16 md:pl-20">Upload artwork file</span>
+          </label>
+
+          <label className="mt-6 flex min-h-28 w-full cursor-pointer flex-col justify-center border border-dashed border-neutral-400 px-6 py-5 transition hover:border-[#FEBB12] md:ml-16 md:w-[calc(100%-4rem)]">
+            <span className="text-xl text-black md:text-2xl">
+              {form.artworkFile ? form.artworkFile.name : "Choose file"}
+            </span>
+            <span className="mt-2 text-base leading-snug text-neutral-600 md:text-xl">
+              Condition: Preferred file format: PDF, Maximum file size 10 MB.
+            </span>
+            <input
+              key={uploadInputKey}
+              type="file"
+              name="artworkFile"
+              accept={ARTWORK_FILE_ACCEPT}
+              onChange={updateArtworkFile}
+              className="sr-only"
+            />
+          </label>
+          <FieldError message={errors.artworkFile} />
         </div>
 
         {/* HEAR ABOUT */}

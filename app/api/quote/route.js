@@ -6,6 +6,20 @@ const QUOTE_RECIPIENT =
   process.env.QUOTE_TO_EMAIL || "info@kristalgraphics.net";
 const QUOTE_FROM =
   process.env.QUOTE_FROM_EMAIL || "Kristal Graphics <info@kristalgraphics.net>";
+const MAX_ARTWORK_FILE_SIZE = 10 * 1024 * 1024;
+const ARTWORK_FILE_EXTENSIONS = [
+  "ai",
+  "pdf",
+  "eps",
+  "svg",
+  "psd",
+  "png",
+  "jpg",
+  "jpeg",
+  "tif",
+  "tiff",
+  "zip",
+];
 
 export const runtime = "nodejs";
 
@@ -50,6 +64,76 @@ function formatList(values, options = []) {
     .join(", ");
 }
 
+function parseJsonArray(value) {
+  if (Array.isArray(value)) return value;
+  if (!value) return [];
+
+  try {
+    const parsedValue = JSON.parse(value);
+    return Array.isArray(parsedValue) ? parsedValue : [];
+  } catch {
+    return [];
+  }
+}
+
+async function parseRequestBody(request) {
+  const contentType = request.headers.get("content-type") || "";
+
+  if (!contentType.includes("multipart/form-data")) {
+    return { body: await request.json(), attachment: null };
+  }
+
+  const data = await request.formData();
+  const file = data.get("artworkFile");
+  const body = {
+    name: data.get("name") || "",
+    email: data.get("email") || "",
+    phone: data.get("phone") || "",
+    companyType: data.get("companyType") || "",
+    serviceType: data.get("serviceType") || "",
+    products: parseJsonArray(data.get("products")),
+    quantity: data.get("quantity") || "",
+    deadline: data.get("deadline") || "",
+    rushService: data.get("rushService") === "true",
+    artwork: parseJsonArray(data.get("artwork")),
+    hearAbout: data.get("hearAbout") || "",
+    notes: data.get("notes") || "",
+    privacyPolicy: data.get("privacyPolicy") === "true",
+  };
+
+  if (!file || typeof file.arrayBuffer !== "function" || file.size === 0) {
+    return { body, attachment: null };
+  }
+
+  const extension = file.name.split(".").pop()?.toLowerCase();
+
+  if (file.size > MAX_ARTWORK_FILE_SIZE) {
+    return {
+      body,
+      attachment: null,
+      error: "Artwork file must be 10 MB or smaller.",
+    };
+  }
+
+  if (!extension || !ARTWORK_FILE_EXTENSIONS.includes(extension)) {
+    return {
+      body,
+      attachment: null,
+      error:
+        "Please upload an AI, PDF, EPS, SVG, PSD, PNG, JPG, JPEG, TIFF, or ZIP file.",
+    };
+  }
+
+  return {
+    body,
+    attachment: {
+      content: Buffer.from(await file.arrayBuffer()),
+      filename: file.name,
+      contentType: file.type || undefined,
+    },
+  };
+}
+
 function validateQuote(body) {
   const missing = requiredFields.filter((field) => {
     const value = body[field];
@@ -84,6 +168,7 @@ function buildEmail(body) {
     ["Deadline", body.deadline],
     ["Rush Service", body.rushService ? "Yes" : "No"],
     ["Artwork", formatList(body.artwork)],
+    ["Artwork File", body.artworkFileName],
     ["How They Heard About Us", body.hearAbout],
     ["Additional Notes", body.notes],
   ];
@@ -124,7 +209,17 @@ function buildEmail(body) {
 
 export async function POST(request) {
   try {
-    const body = await request.json();
+    const { body, attachment, error: attachmentError } =
+      await parseRequestBody(request);
+
+    if (attachmentError) {
+      return NextResponse.json({ error: attachmentError }, { status: 400 });
+    }
+
+    if (attachment) {
+      body.artworkFileName = attachment.filename;
+    }
+
     const validationError = validateQuote(body);
 
     if (validationError) {
@@ -145,6 +240,7 @@ export async function POST(request) {
       subject: email.subject,
       text: email.text,
       html: email.html,
+      attachments: attachment ? [attachment] : undefined,
     });
 
     if (error) {
