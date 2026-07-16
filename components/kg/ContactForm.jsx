@@ -121,7 +121,7 @@ function SuccessModal({ onClose }) {
       aria-modal="true"
       aria-labelledby="quote-success-title"
     >
-      <div className="relative flex w-3/4 2xl:w-3/6 max-w-[800px] flex-col rounded-lg bg-[#181818] p-8 font-body text-white shadow-2xl md:flex-row md:items-center md:p-20 md:pl-0">
+      <div className="relative flex w-3/4 2xl:w-3/6 max-w-[800px] flex-col-reverse gap-20 md:gap-0 rounded-lg bg-[#181818] p-8 font-body text-white shadow-2xl md:flex-row md:items-center md:p-20 md:pl-0">
         <button
           aria-label="Close success message"
           className="absolute right-5 top-5 text-white hover:text-white md:right-10 md:top-10"
@@ -699,7 +699,7 @@ export default function ContactForm() {
           <FieldError message={submitError} />
         </div>
       </form>
-      {!showSuccess && <SuccessModal onClose={() => setShowSuccess(false)} />}
+      {showSuccess && <SuccessModal onClose={() => setShowSuccess(false)} />}
     </>
   );
 }
