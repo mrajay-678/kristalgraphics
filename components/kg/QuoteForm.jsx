@@ -290,7 +290,12 @@ function MultiSelectField({
           aria-invalid={Boolean(error)}
         >
           {options.map((option) => (
-            <option checked={values.includes(option)} onChange={onChange} key={option} value={option}>
+            <option
+              checked={values.includes(option)}
+              onChange={onChange}
+              key={option}
+              value={option}
+            >
               {option}
             </option>
           ))}
@@ -585,7 +590,7 @@ export default function QuoteForm() {
               <div className="pl-9 pt-4">
                 <Checkbox
                   checked={form.rush}
-                  label="Yes, I need this faster than standard production time (7-14 business days)"
+                  label="Yes, I need this faster than standard production time (5-7 business days)"
                   name="rush"
                   onChange={updateField}
                 />
