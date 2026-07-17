@@ -18,7 +18,7 @@ export default function Hero() {
           {/* top part */}
           <div className="mxd-hero-03__top !p-0">
             {/* marquee */}
-            <div className="mxd-hero-03__marquee loading__item pt-[3%] pb-[13%]">
+            <div className="mxd-hero-03__marquee loading__item pt-[3%] pb-[0%]">
               {/* Marquee Start */}
 
               <Swiper
@@ -137,9 +137,11 @@ export default function Hero() {
                   Your <br /> Partner In
                   <br /> Print
                 </div>
-                <div className="hero-03-headline__svg  text-[5.5vw] text-center !mb-0">
-                  Your Partner In Print
-                </div>
+              </div>
+            </div>
+            <div>
+              <div className="hero-03-headline__svg  text-[5.5vw] text-center !mb-0 pb-[3%]">
+                Your Partner In Print
               </div>
             </div>
           </div>
