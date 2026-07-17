@@ -189,14 +189,13 @@ function buildEmail(body) {
     .join("\n");
 
   return {
-    subject: `New quote request from ${body.name}`,
+    subject: `${body.name} - Quote Request`,
     text,
     html: `
       <div style="margin:0;padding:24px;background:#f6f6f6;font-family:Arial,sans-serif;color:#111111;">
         <div style="max-width:720px;margin:0 auto;background:#ffffff;border-radius:10px;overflow:hidden;border:1px solid #e8e8e8;">
           <div style="padding:24px 28px;background:#111111;color:#ffffff;">
             <img src="https://www.kristalgraphics.net/img/kg/email-logo.png" alt="Kristal Graphics" style="height:50px;" />
-            <h1 style="margin:0;font-size:28px;line-height:1.2;">New Quote Request</h1>
           </div>
           <table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;">
             ${htmlRows}
@@ -209,8 +208,11 @@ function buildEmail(body) {
 
 export async function POST(request) {
   try {
-    const { body, attachment, error: attachmentError } =
-      await parseRequestBody(request);
+    const {
+      body,
+      attachment,
+      error: attachmentError,
+    } = await parseRequestBody(request);
 
     if (attachmentError) {
       return NextResponse.json({ error: attachmentError }, { status: 400 });

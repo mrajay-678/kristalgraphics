@@ -719,8 +719,11 @@ html.lenis body {
 .mxd-section.padding-mtext-pre-grid {
   padding-bottom: 9.8rem;
 }
-.mxd-section.padding-mtext-pre-grid.mobile-grid-s {
-  padding-bottom: 11.3rem;
+@media only screen and (max-width: 768px) {
+  .mxd-section.padding-mtext-pre-grid {
+    padding-top: 3rem;
+    padding-bottom: 5.3rem;
+  }
 }
 .mxd-section.padding-mtext-pre-pinned {
   padding-bottom: 10.8rem;

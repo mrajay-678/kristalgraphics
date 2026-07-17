@@ -184,7 +184,7 @@ export default function Timeline() {
       ref={containerRef}
       className="h-screen container mx-auto overflow-hidden"
     >
-      <div className="text-7xl xl:text-9xl font-heading font-thin kg-width pb-24">
+      <div className="text-7xl xl:text-9xl font-heading font-thin kg-width pb-24 text-center">
         40 years of print, perfect, repeat.
       </div>
       <div className="flex kg-width justify-between">
