@@ -40,7 +40,7 @@ export default function FooterMobile() {
           {/* Address */}
 
           <div className="w-4/4 ">
-            <div className="flex gap-10">
+            <div className="flex">
               <div className="w-2/4">
                 <h4 className="mb-4 font-body font-bold text-3xl text-white sm:text-2xl lg:text-3xl">
                   Address:
@@ -57,19 +57,19 @@ export default function FooterMobile() {
                 </Link>
               </div>
               {/* Contact */}
-              <div>
+              <div className="w-2/4">
                 <h4 className="mb-4 text-[13px] font-bold text-white">
                   We got you!
                 </h4>
                 <Link
                   href="mailto:info@kristalgraphics.com"
-                  className="block font-body text-xl text-white/90 transition hover:text-[#FEBB12] sm:text-lg lg:text-3xl underline pb-8"
+                  className="block font-body text-2xl text-white/90 transition hover:text-[#FEBB12] sm:text-lg lg:text-3xl underline pb-8"
                 >
                   info@kristalgraphics.com
                 </Link>
                 <Link
                   href="tel:+18183427822"
-                  className="mt-3 block text-[11px] text-white"
+                  className="mt-3 block text-2xl text-white"
                 >
                   +1 (818) 342-7822
                 </Link>
@@ -79,9 +79,9 @@ export default function FooterMobile() {
           </div>
 
           {/* Links */}
-          <div className="flex items-center justify-between pt-10">
-            <div className="flex items-center justify-start gap-6 w-full">
-              <Image src={unionFooter} alt="Union" className="w-2/4" />
+          <div className="flex items-center justify-between pt-5">
+            <div className="flex items-center justify-start w-full">
+              <Image src={unionFooter} alt="Union" className="w-2/4 pr-10" />
 
               <Image src={sageFooter} alt="Sage" className="w-1/4" />
             </div>
