@@ -7,7 +7,6 @@ import "swiper/css";
 import "swiper/css/free-mode";
 
 import marquee1 from "@/public/img/kg/marquee-1.png";
-import marquee2 from "@/public/img/kg/marquee-2.png";
 import marquee3 from "@/public/img/kg/marquee-3.png";
 import marquee4 from "@/public/img/kg/marquee-4.png";
 
@@ -19,7 +18,7 @@ export default function Hero() {
           {/* top part */}
           <div className="mxd-hero-03__top !p-0">
             {/* marquee */}
-            <div className="mxd-hero-03__marquee loading__item pt-[3%] pb-[6%]">
+            <div className="mxd-hero-03__marquee loading__item pt-[3%] pb-[13%]">
               {/* Marquee Start */}
 
               <Swiper
