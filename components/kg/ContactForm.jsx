@@ -548,7 +548,7 @@ export default function ContactForm() {
             />
 
             <span>
-              Yes, I need this faster than standard production time (7-14
+              Yes, I need this faster than standard production time (5-7
               business days)
             </span>
           </label>
