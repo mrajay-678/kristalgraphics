@@ -185,7 +185,7 @@ export default function Timeline() {
       className="h-screen container mx-auto overflow-hidden"
     >
       <div className="text-7xl xl:text-9xl font-heading font-thin kg-width pb-24">
-        40 years of print, perfect, repeat
+        40 years of print, perfect, repeat.
       </div>
       <div className="flex kg-width justify-between">
         {/* LEFT YEARS */}
