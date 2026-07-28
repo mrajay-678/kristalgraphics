@@ -1,25 +1,85 @@
 import RevealText from "../animation/RevealText";
 import Image from "next/image";
-import juzer from "@/public/img/kg/teams/juzer.svg";
-import murtaza from "@/public/img/kg/teams/murtaza.svg";
-import courtney from "@/public/img/kg/teams/courtney.svg";
-import darwin from "@/public/img/kg/teams/darwin.svg";
-import tasneem from "@/public/img/kg/teams/tasneem.svg";
-import ana from "@/public/img/kg/teams/ana.svg";
-import narisara from "@/public/img/kg/teams/narisara.svg";
-import nafisa from "@/public/img/kg/teams/nafisa.svg";
-import fatema from "@/public/img/kg/teams/fatema.svg";
+import juzer from "@/public/img/kg/teams/juzer.png";
+import murtaza from "@/public/img/kg/teams/murtuza.png";
+import courtney from "@/public/img/kg/teams/courtney.png";
+import darwin from "@/public/img/kg/teams/darwin.png";
+import tasneem from "@/public/img/kg/teams/tasneem.png";
+import ana from "@/public/img/kg/teams/ana.png";
+import narisara from "@/public/img/kg/teams/narisara.png";
+import nafisa from "@/public/img/kg/teams/nafisa.png";
+import fatema from "@/public/img/kg/teams/fatema.png";
+import erick from "@/public/img/kg/teams/Erick.png";
+import jose from "@/public/img/kg/teams/Jose.png";
+import carlos from "@/public/img/kg/teams/Carlos.png";
+import mario from "@/public/img/kg/teams/Mario.png";
 
-let team = [
-  juzer,
-  murtaza,
-  courtney,
-  darwin,
-  tasneem,
-  ana,
-  narisara,
-  nafisa,
-  fatema,
+const team = [
+  {
+    image: juzer,
+    name: "Juzer Saifee",
+    position: "Co-founder",
+  },
+  {
+    image: murtaza,
+    name: "Murtaza Mansoor",
+    position: "Co-founder",
+  },
+  {
+    image: courtney,
+    name: "Courtney Meherin",
+    position: "Office Manager",
+  },
+  {
+    image: darwin,
+    name: "Darwin Devitis",
+    position: "Head of Design",
+  },
+  {
+    image: tasneem,
+    name: "Tasneem Mansoor",
+    position: "Accountant",
+  },
+  {
+    image: ana,
+    name: "Ana Estrada",
+    position: "DTF Specialist",
+  },
+  {
+    image: narisara,
+    name: "Narisara Fungladda",
+    position: "Embroidery Specialist",
+  },
+  {
+    image: nafisa,
+    name: "Nafisa Zakir",
+    position: "Human Resources",
+  },
+  {
+    image: fatema,
+    name: "Fatema Lakdawala",
+    position: "Brand & Marketing Manager",
+  },
+  {
+    image: erick,
+    name: "Erick",
+    position: "Pressman",
+  },
+  {
+    image: jose,
+    name: "Jose Perez",
+    position: "Pressman",
+  },
+  {
+    image: carlos,
+    name: "Carlos Carrillo",
+    position: "Screen Printing Manager",
+  },
+  {
+    image: mario,
+    name: "Mario Ascon",
+    position: "Delivery Executive",
+  },
 ];
 
 const Teams = () => {
@@ -35,12 +95,20 @@ const Teams = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-20 pb-24">
         {team.map((member, i) => (
-          <div key={i} className="mb-20">
+          <div key={i} className="mb-20 relative">
             <Image
-              src={member}
-              alt={`Team member ${i + 1}`}
+              src={member.image}
+              alt={member.name}
               className="w-full h-auto"
             />
+            <div className="absolute bottom-10 left-8 p-4">
+              <h3 className="font-heading text-5xl leading-none text-white w-2/4 mb-4">
+                {member.name}
+              </h3>
+              <p className="font-heading  text-3xl font-light text-[#febb12]">
+                {member.position}
+              </p>
+            </div>
           </div>
         ))}
       </div>
