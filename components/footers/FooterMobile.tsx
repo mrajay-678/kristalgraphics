@@ -50,9 +50,9 @@ export default function FooterMobile() {
                   <p className="font-body text-2xl leading-relaxed text-white/90 sm:text-lg lg:text-3xl">
                     9607 Canoga Ave,
                     <br />
-                    Woodland Hills,
+                    Chatsworth,
                     <br />
-                    CA 91367
+                    CA 91311
                   </p>
                 </Link>
               </div>
