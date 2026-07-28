@@ -62,7 +62,7 @@ const team = [
   },
   {
     image: erick,
-    name: "Erick",
+    name: "Eric Morales",
     position: "Pressman",
   },
   {
