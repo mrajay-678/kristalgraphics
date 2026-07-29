@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
-import logo from "@/public/img/kg/Vector.svg";
 
 const MIN_VISIBLE_MS = 900;
 const MAX_WAIT_MS = 4500;
