@@ -16,11 +16,11 @@ interface ClientLayoutProps {
 export default function ClientLayout({ children }: ClientLayoutProps) {
   return (
     <>
-      <AssetPreloader />
+      {/* <AssetPreloader /> */}
       {/* <MobileMenu /> */}
       <Header1 />
       {children}
-      <Footer2 />      
+      <Footer2 />
       <InitScroll />
       {/* <ScrollTop /> */}
       <LenisSmoothScroll />
