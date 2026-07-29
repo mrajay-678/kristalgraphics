@@ -107,7 +107,7 @@ html.asset-preloader-active body {
 
 .kg-preloader__count span {
   min-width: 3ch;
-  font-size: clamp(5.5rem, 17vw, 15rem);
+  font-size: clamp(2.5rem, 9vw, 8rem);
 }
 
 .kg-preloader__count small {
