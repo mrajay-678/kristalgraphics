@@ -156,7 +156,7 @@ export default function Hero() {
                     loop
                     autoPlay
                     playsInline
-                    preload="metadata"
+                    preload="none"
                     disablePictureInPicture
                     controls={false}
                     src={"/video/kg/home.mp4"}

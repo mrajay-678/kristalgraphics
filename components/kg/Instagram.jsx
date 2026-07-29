@@ -1,6 +1,7 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import Link from "next/link";
 
 const fallbackPosts = [
   {
@@ -34,9 +35,11 @@ export default function Instagram() {
           (almost incurably) social!
         </h2>
 
-        <p className="lg:w-6/12 font-body text-5xl">
-          Follow us for behind-the-scenes action, service spotlights and
-          exclusive offers.
+        <p className="lg:w-6/12 font-body text-5xl leading-[1.4]">
+          <Link href="https://www.instagram.com/kristal.graphics/">
+            Follow us
+          </Link>{" "}
+          for behind-the-scenes action, service spotlights and exclusive offers.
         </p>
       </div>
 

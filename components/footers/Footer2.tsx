@@ -5,6 +5,13 @@ import sageFooter from "@/public/img/kg/sage-footer.svg";
 import whitenimonics from "@/public/img/kg/footer-whitenimonics.svg";
 import blacknimonics from "@/public/img/kg/footer-blacknimonics.svg";
 import FooterMobile from "./FooterMobile";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faLinkedin,
+  faYelp,
+} from "@fortawesome/free-brands-svg-icons";
+
 export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
   return (
     <footer
@@ -109,7 +116,32 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
               </div>
 
               <div className="flex flex-wrap lg:flex-row gap-5 max-w-6/12 md:w-6/12 justify-between items-end">
-                <div className="w-3/12 flex flex-col items-center gap-2 opacity-0"></div>
+                <div className="w-3/12 flex flex-row justify-center items-center gap-4">
+                  <Link
+                    href="https://www.instagram.com/kristal.graphics/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-[#FEBB12] transition"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} size="2x" />
+                  </Link>
+                  <Link
+                    href="https://www.linkedin.com/company/kristal-graphics/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-[#FEBB12] transition"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                  </Link>
+                  <Link
+                    href="https://www.yelp.com/biz/kristal-graphics-chatsworth"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-[#FEBB12] transition"
+                  >
+                    <FontAwesomeIcon icon={faYelp} size="2x" />
+                  </Link>
+                </div>
                 <div className="w-3/12">
                   <ul>
                     <li className="pb-2 text-3xl">

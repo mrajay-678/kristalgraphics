@@ -5,6 +5,12 @@ import unionFooter from "@/public/img/kg/union-footer.svg";
 import sageFooter from "@/public/img/kg/sage-footer.svg";
 import blacknimonics from "@/public/img/kg/footer-blacknimonics.svg";
 import whitenimonics from "@/public/img/kg/footer-whitenimonics.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faLinkedin,
+  faYelp,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function FooterMobile() {
   return (
@@ -79,12 +85,38 @@ export default function FooterMobile() {
           </div>
 
           {/* Links */}
-          <div className="flex items-center justify-between pt-5">
-            <div className="flex items-center justify-start w-full">
+          <div className="flex items-center justify-between pt-20">
+            <div className="flex items-center justify-center w-full">
               <Image src={unionFooter} alt="Union" className="w-2/4 pr-10" />
 
               <Image src={sageFooter} alt="Sage" className="w-1/4" />
             </div>
+          </div>
+          <div className="w-12/12 pt-10 pb-10 flex flex-row justify-center items-center gap-4">
+            <Link
+              href="https://www.instagram.com/kristal.graphics/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#FEBB12] transition"
+            >
+              <FontAwesomeIcon icon={faInstagram} size="2x" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/kristal-graphics/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#FEBB12] transition"
+            >
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
+            </Link>
+            <Link
+              href="https://www.yelp.com/biz/kristal-graphics-chatsworth"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#FEBB12] transition"
+            >
+              <FontAwesomeIcon icon={faYelp} size="2x" />
+            </Link>
           </div>
         </div>
 
