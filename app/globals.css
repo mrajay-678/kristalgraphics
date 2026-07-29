@@ -34,8 +34,8 @@ html.asset-preloader-active body {
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: #080808;
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
 }
 
 .kg-preloader--done {
@@ -64,11 +64,11 @@ html.asset-preloader-active body {
   filter: brightness(0) invert(1);
 }
 .kg-preloader__content {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  width: min(78vw, 48rem);
-  gap: 1.2rem;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .kg-preloader__bar {
@@ -100,7 +100,7 @@ html.asset-preloader-active body {
 .kg-preloader__count {
   display: flex;
   align-items: flex-start;
-  color: #ffffff;
+  color: #000;
   font-family: var(--font-brand);
   line-height: 0.85;
 }

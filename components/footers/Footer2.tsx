@@ -123,7 +123,11 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                     rel="noopener noreferrer"
                     className="text-white hover:text-[#FEBB12] transition"
                   >
-                    <FontAwesomeIcon icon={faInstagram} size="2x" />
+                    <FontAwesomeIcon
+                      icon={faInstagram}
+                      size="2x"
+                      className="w-/4"
+                    />
                   </Link>
                   <Link
                     href="https://www.linkedin.com/company/kristal-graphics/"
@@ -131,7 +135,11 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                     rel="noopener noreferrer"
                     className="text-white hover:text-[#FEBB12] transition"
                   >
-                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                    <FontAwesomeIcon
+                      icon={faLinkedin}
+                      size="2x"
+                      className="w-/4"
+                    />
                   </Link>
                   <Link
                     href="https://www.yelp.com/biz/kristal-graphics-chatsworth"
@@ -139,7 +147,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                     rel="noopener noreferrer"
                     className="text-white hover:text-[#FEBB12] transition"
                   >
-                    <FontAwesomeIcon icon={faYelp} size="2x" />
+                    <FontAwesomeIcon icon={faYelp} size="2x" className="w-/4" />
                   </Link>
                 </div>
                 <div className="w-3/12">

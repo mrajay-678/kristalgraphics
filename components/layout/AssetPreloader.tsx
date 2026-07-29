@@ -144,14 +144,9 @@ export default function AssetPreloader() {
       aria-live="polite"
       aria-label="Loading page"
     >
-      {/* <div className="kg-preloader__grain" /> */}
       <div className="kg-preloader__content">
-        <div className="kg-preloader__bar" aria-hidden="true">
-          <span style={{ transform: `scaleX(${progress / 100})` }} />
-        </div>
         <div className="kg-preloader__count">
-          <span>{progress}</span>
-          <small>%</small>
+          <span>{progress}%</span>
         </div>
       </div>
     </div>
