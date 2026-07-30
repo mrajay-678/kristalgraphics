@@ -108,10 +108,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
           <div className="mx-auto pt-20 px-0">
             <div className="flex flex-col gap-6 border-t border-white/30 pt-8 md:flex-row md:items-end md:justify-between">
               <div className="font-body text-sm text-white sm:text-2xl lg:text-xl">
-                <p className="text-white text-3xl">
-                  © {currentYear} Kristal Graphics. All rights reserved.
-                </p>
-                <div className="w-3/12 flex flex-row justify-center items-center gap-4">
+                <div className="w-6/12 flex flex-row justify-start items-center gap-4 pb-5">
                   <Link
                     href="https://www.instagram.com/kristal.graphics/"
                     target="_blank"
@@ -121,7 +118,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                     <FontAwesomeIcon
                       icon={faInstagram}
                       size="2x"
-                      className="w-3/4"
+                      className="w-4/4"
                     />
                   </Link>
                   <Link
@@ -133,7 +130,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                     <FontAwesomeIcon
                       icon={faLinkedin}
                       size="2x"
-                      className="w-3/4"
+                      className="w-4/4"
                     />
                   </Link>
                   <Link
@@ -145,10 +142,13 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                     <FontAwesomeIcon
                       icon={faYelp}
                       size="2x"
-                      className="w-3/4"
+                      className="w-4/4"
                     />
                   </Link>
                 </div>
+                <p className="text-white text-3xl">
+                  © {currentYear} Kristal Graphics. All rights reserved.
+                </p>
               </div>
 
               <div className="flex flex-wrap lg:flex-row gap-5 max-w-6/12 md:w-6/12 justify-between items-end">
