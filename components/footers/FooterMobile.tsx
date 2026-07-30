@@ -13,6 +13,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function FooterMobile() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="md:hidden">
       {/* Pattern */}
@@ -99,7 +101,7 @@ export default function FooterMobile() {
               rel="noopener noreferrer"
               className="text-white hover:text-[#FEBB12] transition"
             >
-              <FontAwesomeIcon icon={faInstagram} size="2x" />
+              <FontAwesomeIcon icon={faInstagram} size="2x" className="w-3/4" />
             </Link>
             <Link
               href="https://www.linkedin.com/company/kristal-graphics/"
@@ -107,7 +109,7 @@ export default function FooterMobile() {
               rel="noopener noreferrer"
               className="text-white hover:text-[#FEBB12] transition"
             >
-              <FontAwesomeIcon icon={faLinkedin} size="2x" />
+              <FontAwesomeIcon icon={faLinkedin} size="2x" className="w-3/4" />
             </Link>
             <Link
               href="https://www.yelp.com/biz/kristal-graphics-chatsworth"
@@ -115,7 +117,7 @@ export default function FooterMobile() {
               rel="noopener noreferrer"
               className="text-white hover:text-[#FEBB12] transition"
             >
-              <FontAwesomeIcon icon={faYelp} size="2x" />
+              <FontAwesomeIcon icon={faYelp} size="2x" className="w-3/4" />
             </Link>
           </div>
         </div>
@@ -127,7 +129,7 @@ export default function FooterMobile() {
           </p>
 
           <p className="mt-2 text-center text-[10px] text-white/70">
-            © 1977 Kristal Graphics. All rights reserved
+            © {currentYear} Kristal Graphics. All rights reserved
           </p>
         </div>
       </div>

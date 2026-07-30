@@ -13,6 +13,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
+  const currentYear = new Date().getFullYear();
   return (
     <footer
       id="mxd-footer"
@@ -108,7 +109,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
             <div className="flex flex-col gap-6 border-t border-white/30 pt-8 md:flex-row md:items-end md:justify-between">
               <div className="font-body text-sm text-white sm:text-2xl lg:text-xl">
                 <p className="text-white text-3xl">
-                  © Kristal Graphics. All rights reserved.
+                  © {currentYear} Kristal Graphics. All rights reserved.
                 </p>
                 <div className="w-3/12 flex flex-row justify-center items-center gap-4">
                   <Link
