@@ -126,7 +126,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                     <FontAwesomeIcon
                       icon={faInstagram}
                       size="2x"
-                      className="w-/4"
+                      className="w-3/4"
                     />
                   </Link>
                   <Link
@@ -138,7 +138,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                     <FontAwesomeIcon
                       icon={faLinkedin}
                       size="2x"
-                      className="w-/4"
+                      className="w-3/4"
                     />
                   </Link>
                   <Link
@@ -147,7 +147,11 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                     rel="noopener noreferrer"
                     className="text-white hover:text-[#FEBB12] transition"
                   >
-                    <FontAwesomeIcon icon={faYelp} size="2x" className="w-/4" />
+                    <FontAwesomeIcon
+                      icon={faYelp}
+                      size="2x"
+                      className="w-3/4"
+                    />
                   </Link>
                 </div>
                 <div className="w-3/12">
