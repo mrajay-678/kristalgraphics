@@ -107,15 +107,9 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
           <div className="mx-auto pt-20 px-0">
             <div className="flex flex-col gap-6 border-t border-white/30 pt-8 md:flex-row md:items-end md:justify-between">
               <div className="font-body text-sm text-white sm:text-2xl lg:text-xl">
-                <p className="text-white text-3xl pb-5">
-                  Privacy Policy | Terms of Service
-                </p>
                 <p className="text-white text-3xl">
-                  © 1977 Kristal Graphics. All rights reserved
+                  © Kristal Graphics. All rights reserved.
                 </p>
-              </div>
-
-              <div className="flex flex-wrap lg:flex-row gap-5 max-w-6/12 md:w-6/12 justify-between items-end">
                 <div className="w-3/12 flex flex-row justify-center items-center gap-4">
                   <Link
                     href="https://www.instagram.com/kristal.graphics/"
@@ -154,6 +148,10 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                     />
                   </Link>
                 </div>
+              </div>
+
+              <div className="flex flex-wrap lg:flex-row gap-5 max-w-6/12 md:w-6/12 justify-between items-end">
+                <div className="w-3/12"></div>
                 <div className="w-3/12">
                   <ul>
                     <li className="pb-2 text-3xl">
