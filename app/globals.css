@@ -107,7 +107,8 @@ html.asset-preloader-active body {
 
 .kg-preloader__count span {
   min-width: 3ch;
-  font-size: clamp(2.5rem, 9vw, 8rem);
+  font-size: 21px;
+  font-weight: 300;
 }
 
 .kg-preloader__count small {
@@ -132,7 +133,8 @@ html.asset-preloader-active body {
 @keyframes kg-preloader-exit {
   to {
     visibility: hidden;
-    transform: translateY(-100%);
+    /* transform: translateY(-100%); */
+    opacity: 0;
   }
 }
 

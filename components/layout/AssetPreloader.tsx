@@ -182,7 +182,7 @@ export default function AssetPreloader() {
 
         return prev + 1;
       });
-    }, 50); // 100ms × 100 = ~10 seconds
+    }, 30); // 100ms × 100 = ~10 seconds
 
     return () => {
       clearInterval(interval);
