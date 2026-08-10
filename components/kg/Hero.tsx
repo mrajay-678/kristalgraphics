@@ -149,7 +149,7 @@ export default function Hero() {
           <div className="mxd-hero-03__bottom">
             <div className="">
               {/* video divider */}
-              <div className="mxd-container grid-container">
+              <div className="mxd-container grid-container !px-0 md:px-[1.5rem]">
                 <div className="mx-auto">
                   <video
                     muted

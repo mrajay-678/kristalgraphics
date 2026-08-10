@@ -84,7 +84,7 @@ export default function Header1() {
         ${isSticky ? "py-10" : "py-5"}
       `}
     >
-      <div className="flex items-center justify-between max-w-[1920px] mxd-hero-03__header mx-auto px-6 md:px-[4.5rem]">
+      <div className="flex items-center justify-between max-w-[1920px] mxd-hero-03__header mx-auto px-[1.5rem]">
         {/* Logo */}
         <div className="mxd-header__logo loading__fade">
           <Link href="/" className="mxd-logo">
