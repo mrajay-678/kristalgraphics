@@ -92,23 +92,23 @@ const ImageSequenceScroll = () => {
           <div className="flex flex-col md:w-2/4 gap-2 md:gap-5 pb-10 md:pb-52">
             <div className="flex items-center gap-7">
               <RevealText className="reveal-type">
-                <div className="md:text-[12vw] text-9xl leading-none font-bold font-heading">
+                <div className="insta-number text-9xl leading-none font-bold font-heading">
                   4
                 </div>
               </RevealText>
 
               <RevealText className="reveal-type">
-                <div className="font-light leading-none md:text-[4.5vw] text-7xl font-heading">
+                <div className="font-light leading-none insta-title text-7xl font-heading">
                   decades of expertise
                 </div>
               </RevealText>
             </div>
 
             <div className="pt-10 text-5xl font-body reveal-type md:w-10/12">
-              We&apos;re a full-service print and promo shop trusted by businesses
-              nationwide. Everything is handled in-house by an experienced crew
-              committed to quality you can count on and timelines you can trust.
-              Our specialty? Bulk orders.
+              We&apos;re a full-service print and promo shop trusted by
+              businesses nationwide. Everything is handled in-house by an
+              experienced crew committed to quality you can count on and
+              timelines you can trust. Our specialty? Bulk orders.
             </div>
           </div>
 

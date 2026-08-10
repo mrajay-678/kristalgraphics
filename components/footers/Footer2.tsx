@@ -77,7 +77,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                     <br />
                     Woodland Hills,
                     <br />
-                    CA 91367
+                    CA 91311
                   </p>
                 </Link>
               </div>

@@ -21079,3 +21079,12 @@ html {
     width: 100%;
   }
 }
+
+@media (min-width: 769px) {
+  .insta-number {
+    font-size: clamp(40px, 12vw, 300px);
+  }
+  .insta-title {
+    font-size: clamp(40px, 4.5vw, 128px);
+  }
+}
