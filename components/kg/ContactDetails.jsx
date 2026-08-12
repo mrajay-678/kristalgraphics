@@ -35,7 +35,7 @@ export const ContactDetails = () => {
               <p className="font-body text-2xl leading-relaxed sm:text-lg lg:text-3xl">
                 9607 Canoga Ave,
                 <br />
-                Woodland Hills,
+                Chatsworth,
                 <br />
                 CA 91367
               </p>
