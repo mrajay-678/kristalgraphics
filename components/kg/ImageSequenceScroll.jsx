@@ -116,7 +116,7 @@ const ImageSequenceScroll = () => {
             <Image
               src={expertiesLogo}
               alt="experties logo"
-              className="md:w-10/12 pt-20 md:pb-0 pb-24"
+              className="md:w-12/12 pt-20 md:pb-0 pb-24"
             />
           </div>
         </div>

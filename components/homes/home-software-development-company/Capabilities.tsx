@@ -18,7 +18,7 @@ export default function Capabilities() {
 
   const handleMouseMove = (
     e: React.MouseEvent<HTMLDivElement>,
-    index: number
+    index: number,
   ) => {
     setHoverState({
       activeIndex: index,
@@ -44,11 +44,14 @@ export default function Capabilities() {
         {/* Block - Section Title Start */}
         <div className="mxd-block">
           <div className="mxd-section-title">
-            <div className="p-0 container-fluid">
+            <div className="!p-0 container-fluid">
               <div className="row g-0">
                 <div className="col-12 col-xl-6 mxd-grid-item no-margin">
                   <div className="mxd-section-title__hrtitle">
-                    <RevealText as="h2" className="font-light reveal-type font-heading text-9xl font-black" >
+                    <RevealText
+                      as="h2"
+                      className="font-light reveal-type font-heading text-9xl font-black"
+                    >
                       Our capabilities
                     </RevealText>
                   </div>
@@ -60,7 +63,7 @@ export default function Capabilities() {
         {/* Block - Section Title End */}
         {/* Block - Our Capabilities List Start */}
         <div className="mxd-block">
-          <div className="p-0 container-fluid">
+          <div className="!p-0 container-fluid">
             <div className="row g-0">
               <div className="col-12 mxd-grid-item no-margin">
                 <div className="mxd-cpb-list">
@@ -99,8 +102,10 @@ export default function Capabilities() {
                         />
                       </div>
                       <div className="mxd-cpb-list__content anim-uni-in-up">
-                        <h6 className="m-0 mxd-cpb-list__title font-40 font-heading">{item.title}</h6>
-                        <div className="mxd-cpb-list__num font-heading"> 
+                        <h6 className="m-0 mxd-cpb-list__title font-40 font-heading">
+                          {item.title}
+                        </h6>
+                        <div className="mxd-cpb-list__num font-heading">
                           <span>{item.num}</span>
                         </div>
                       </div>

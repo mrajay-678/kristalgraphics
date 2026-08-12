@@ -12,16 +12,19 @@ export const page = () => {
       <section className="pt-60">
         <TimelineSection />
       </section>
-      <section id="about" className="lg:flex container gap-20 mx-auto">
+      <section
+        id="about"
+        className="lg:flex max-w-[1920px] mxd-hero-03__header mx-auto px-[1.5rem] gap-20"
+      >
         <div className="lg:w-2/4">
           <Image src={aboutOne} alt="Murtuza" className="object-cover h-3/4" />
           <div className="pt-20">
             <p className="text-5xl font-thin font-body">
-              For four decades, we&apos;ve partnered with businesses, event planners,
-              agencies, and brands who need reliable quality and honest
-              timelines. With an in-house design team for support, we don&apos;t just
-              print what you ask for, we guide you to what actually works for
-              your project, budget, and goals.
+              For four decades, we&apos;ve partnered with businesses, event
+              planners, agencies, and brands who need reliable quality and
+              honest timelines. With an in-house design team for support, we
+              don&apos;t just print what you ask for, we guide you to what
+              actually works for your project, budget, and goals.
             </p>
           </div>
         </div>

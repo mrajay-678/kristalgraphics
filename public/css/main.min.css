@@ -17765,9 +17765,9 @@ form textarea:required:valid {
 }
 .mxd-approach-list__border {
   position: relative;
-  left: 1.5rem;
-  width: -moz-calc(100% - 3rem);
-  width: calc(100% - 3rem);
+  left: 0rem;
+  width: -moz-calc(100%);
+  width: calc(100%);
   height: 2px;
   background-color: var(--st-bright);
 }
@@ -21086,5 +21086,12 @@ html {
   }
   .insta-title {
     font-size: clamp(40px, 4.5vw, 128px);
+  }
+}
+
+@media (min-width: 1900px) {
+  .mxd-container {
+    max-width: 90%;
+    width: 100%;
   }
 }

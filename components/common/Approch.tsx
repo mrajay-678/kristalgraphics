@@ -6,13 +6,13 @@ import RevealText from "../animation/RevealText";
 export default function Approch() {
   return (
     <div className="mxd-section padding-pre-grid mobile-grid-s pt-52">
-      <div className="container mx-auto">
+      <div className="max-w-[1920px] mxd-hero-03__header mx-auto px-[1.5rem]">
         {/* Block - Section Title Start */}
         <div className="mxd-block">
           <div className="mxd-section-title">
-            <div className="p-0 container-fluid">
+            <div className="!p-0 container-fluid">
               <div className="row g-0">
-                <div className="col-12 col-xl-6 mxd-grid-item no-margin">
+                <div className="col-12 col-xl-6 mxd-grid-item no-margin !p-0">
                   <div className="mxd-section-title__hrtitle anim-uni-in-up">
                     <RevealText
                       as="h2"
@@ -34,10 +34,10 @@ export default function Approch() {
               <div className="mxd-approach-list__item" key={idx}>
                 <div className="mxd-approach-list__border anim-uni-in-up" />
                 <div className="mxd-approach-list__inner">
-                  <div className="px-0 container-fluid">
+                  <div className="!px-0 container-fluid">
                     <div className="flex flex-col justify-between md:flex-row gap-20xl:flex-row">
-                      <div className="w-full xl:w-1/2 mxd-grid-item no-margin">
-                        <div className="mxd-approach-list__title !text-start anim-uni-in-up">
+                      <div className="w-full xl:w-1/2 mxd-grid-item no-margin !p-0">
+                        <div className="mxd-approach-list__title !text-start anim-uni-in-up !p-0">
                           <h6 className="text-7xl font-heading">
                             {item.title}
                           </h6>

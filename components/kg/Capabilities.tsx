@@ -42,9 +42,9 @@ export default function Capabilities() {
         {/* Block - Section Title Start */}
         <div className="mxd-block">
           <div className="mxd-section-title">
-            <div className="p-0 container-fluid">
+            <div className="!p-0 container-fluid">
               <div className="row g-0">
-                <div className="col-12 col-xl-6 mxd-grid-item no-margin">
+                <div className="col-12 col-xl-6 mxd-grid-item no-margin !p-0">
                   <div className="mxd-section-title__hrtitle">
                     <RevealText
                       as="h2"
@@ -61,9 +61,9 @@ export default function Capabilities() {
         {/* Block - Section Title End */}
         {/* Block - Our Capabilities List Start */}
         <div className="mxd-block">
-          <div className="p-0 container-fluid">
+          <div className="!p-0 container-fluid">
             <div className="row g-0">
-              <div className="col-12 mxd-grid-item no-margin">
+              <div className="col-12 mxd-grid-item no-margin !p-0">
                 <div className="mxd-cpb-list">
                   {capabilities.map((item: compatibility, idx: number) => (
                     <div

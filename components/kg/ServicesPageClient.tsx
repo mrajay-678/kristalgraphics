@@ -8,14 +8,14 @@ import { services } from "@/data/kg/services";
 const ServicesPageClient = () => {
   return (
     <main className="pt-32 md:pt-60">
-      <div className="w-11/12 mx-auto">
+      <div className="max-w-[1920px] mxd-hero-03__header mx-auto px-[1.5rem]">
         <ServiceHero />
         <div className="relative font-inter antialiased">
           <div className="relative min-h-screen overflow-hidde">
             <div className="mxd-block">
-              <div className="p-0 container-fluid">
+              <div className="!container-fluid !p-0">
                 <div className="row g-0">
-                  <div className="col-12 mxd-grid-item no-margin">
+                  <div className="col-12 mxd-grid-item no-margin !p-0">
                     <div className="mxd-cpb-list">
                       {services.map((item, idx: number) => {
                         return (
