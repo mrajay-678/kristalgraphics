@@ -12,7 +12,7 @@ import {
   faYelp,
 } from "@fortawesome/free-brands-svg-icons";
 
-export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
+export default function Footer2() {
   const currentYear = new Date().getFullYear();
   return (
     <footer
@@ -90,10 +90,10 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
 
                 <div className="space-y-2">
                   <Link
-                    href="mailto:info@kristalgraphics.com"
+                    href="mailto:info@kristalgraphics.net"
                     className="block font-body text-3xl text-white/90 transition hover:text-[#FEBB12] sm:text-lg lg:text-3xl underline pb-8"
                   >
-                    info@kristalgraphics.com
+                    info@kristalgraphics.net
                   </Link>
                   <Link
                     href="tel:+18183427822"

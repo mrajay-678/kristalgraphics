@@ -70,10 +70,10 @@ export default function FooterMobile() {
                   We got you!
                 </h4>
                 <Link
-                  href="mailto:info@kristalgraphics.com"
+                  href="mailto:info@kristalgraphics.net"
                   className="block font-body text-2xl text-white/90 transition hover:text-[#FEBB12] sm:text-lg lg:text-3xl underline pb-8"
                 >
-                  info@kristalgraphics.com
+                  info@kristalgraphics.net
                 </Link>
                 <Link
                   href="tel:+18183427822"
