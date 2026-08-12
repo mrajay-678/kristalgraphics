@@ -22,17 +22,19 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
       <FooterMobile />
 
       <div className="hidden md:block">
-        <div className="md:w-2/4 ms-auto pb-6 md:px-32">
-          <Image
-            src={blacknimonics}
-            alt="Black Monics"
-            className="w-5/12 ms-auto"
-          />
+        <div className="max-w-[1920px] mxd-hero-03__header mx-auto px-[1.5rem]">
+          <div className="md:w-2/4 ms-auto pb-6">
+            <Image
+              src={blacknimonics}
+              alt="Black Monics"
+              className="w-5/12 ms-auto"
+            />
+          </div>
         </div>
         {/* Main Content */}
         <div className="relative mx-auto grid-container pt-10 px-8 md:px-32 gap-16 pb-20  lg:flex-row lg:items-end lg:gap-10 bg-[#181818]">
           {/* Left Content */}
-          <div className="flex w-full justify-between items-end">
+          <div className="flex max-w-[1920px] mxd-hero-03__header mx-auto mb-40 px-[1.5rem] justify-between items-end">
             <h2 className="font-heading text-4xl font-light leading-normal text-white w-6/12 sm:text-5xl md:text-6xl lg:text-[5vw]">
               Ready to print merch at scale?
             </h2>
@@ -46,7 +48,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
           </div>
 
           {/* Right Content */}
-          <div className="flex w-full items-start lg:items-end flex-col gap-6 lg:flex-row lg:justify-between pt-20 lg:pt-72">
+          <div className="flex max-w-[1920px] mxd-hero-03__header mx-auto px-[1.5rem] items-start lg:items-end flex-col gap-6 lg:flex-row lg:justify-between pt-20 lg:pt-72">
             <Link href={"/get-a-quote"}>
               <h3 className="font-heading font-medium text-white sm:text-7xl md:text-7xl lg:text-[5vw] hover:text-[#FEBB12]">
                 Get a <span className="">quote!</span>
@@ -75,7 +77,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                   <p className="font-body text-2xl leading-relaxed text-white/90 sm:text-lg lg:text-3xl">
                     9607 Canoga Ave,
                     <br />
-                    Woodland Hills,
+                    Chatsworth,
                     <br />
                     CA 91311
                   </p>
@@ -105,7 +107,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
               </div>
             </div>
           </div>
-          <div className="mx-auto pt-20 px-0">
+          <div className="max-w-[1920px] mxd-hero-03__header mx-auto px-[1.5rem] mt-20">
             <div className="flex flex-col gap-6 border-t border-white/30 pt-8 md:flex-row md:items-end md:justify-between">
               <div className="font-body text-sm text-white sm:text-2xl lg:text-xl">
                 <div className="w-6/12 flex flex-row justify-start items-center gap-4 pb-5">
