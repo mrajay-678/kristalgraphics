@@ -12,7 +12,7 @@ import {
   faYelp,
 } from "@fortawesome/free-brands-svg-icons";
 
-export default function Footer2() {
+export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
   const currentYear = new Date().getFullYear();
   return (
     <footer
@@ -22,17 +22,15 @@ export default function Footer2() {
       <FooterMobile />
 
       <div className="hidden md:block">
-        <div className="mx-auto max-w-[1920px] mxd-hero-03__header px-[1.5rem]">
-          <div className="md:w-2/4 ms-auto ">
-            <Image
-              src={blacknimonics}
-              alt="Black Monics"
-              className="w-5/12 ms-auto"
-            />
-          </div>
+        <div className="md:w-2/4 ms-auto pb-6 md:px-32">
+          <Image
+            src={blacknimonics}
+            alt="Black Monics"
+            className="w-5/12 ms-auto"
+          />
         </div>
         {/* Main Content */}
-        <div className="relative mx-auto max-w-[1920px] mxd-hero-03__header px-[1.5rem] pt-10 gap-16 pb-20 mt-14 lg:flex-row lg:items-end lg:gap-10 bg-[#181818]">
+        <div className="relative mx-auto grid-container pt-10 px-8 md:px-32 gap-16 pb-20  lg:flex-row lg:items-end lg:gap-10 bg-[#181818]">
           {/* Left Content */}
           <div className="flex w-full justify-between items-end">
             <h2 className="font-heading text-4xl font-light leading-normal text-white w-6/12 sm:text-5xl md:text-6xl lg:text-[5vw]">
@@ -68,7 +66,7 @@ export default function Footer2() {
                   alt="Sage Footer"
                 />
               </div>
-              <div className="md:w-2/12">
+              <div className="md:w-3/12">
                 <h4 className="mb-10 font-body font-bold text-5xl text-white sm:text-2xl lg:text-3xl">
                   Address:
                 </h4>
@@ -77,7 +75,7 @@ export default function Footer2() {
                   <p className="font-body text-2xl leading-relaxed text-white/90 sm:text-lg lg:text-3xl">
                     9607 Canoga Ave,
                     <br />
-                    Chatsworth,
+                    Woodland Hills,
                     <br />
                     CA 91311
                   </p>
@@ -85,17 +83,17 @@ export default function Footer2() {
               </div>
 
               {/* Contact */}
-              <div className="md:w-4/12">
+              <div className="md:w-3/12">
                 <h4 className="mb-10 font-body font-bold text-5xl text-white sm:text-2xl lg:text-3xl">
                   We got you!
                 </h4>
 
                 <div className="space-y-2">
                   <Link
-                    href="mailto:info@kristalgraphics.net"
+                    href="mailto:info@kristalgraphics.com"
                     className="block font-body text-3xl text-white/90 transition hover:text-[#FEBB12] sm:text-lg lg:text-3xl underline pb-8"
                   >
-                    info@kristalgraphics.net
+                    info@kristalgraphics.com
                   </Link>
                   <Link
                     href="tel:+18183427822"
@@ -155,7 +153,7 @@ export default function Footer2() {
 
               <div className="flex flex-wrap lg:flex-row gap-5 max-w-6/12 md:w-6/12 justify-between items-end">
                 <div className="w-3/12"></div>
-                <div className="w-2/12">
+                <div className="w-3/12">
                   <ul>
                     <li className="pb-2 text-3xl">
                       <Link href="/" className="text-white hover:underline">
@@ -174,7 +172,7 @@ export default function Footer2() {
                 </div>
 
                 {/* Contact */}
-                <div className="w-4/12">
+                <div className="w-3/12">
                   <ul>
                     <li className="pb-2 text-3xl">
                       <Link
