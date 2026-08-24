@@ -22,8 +22,8 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
       <FooterMobile />
 
       <div className="hidden md:block">
-        <div className="max-w-[1920px] mxd-hero-03__header mx-auto px-[1.5rem]">
-          <div className="md:w-2/4 ms-auto pb-6">
+        <div className="mx-auto grid-container px-8 md:px-32">
+          <div className="md:w-2/4 ms-auto pb-6 px-[1.5rem] mxd-hero-03__header mb-8">
             <Image
               src={blacknimonics}
               alt="Black Monics"
