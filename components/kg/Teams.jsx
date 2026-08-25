@@ -13,6 +13,10 @@ import erick from "@/public/img/kg/teams/Erick.png";
 import jose from "@/public/img/kg/teams/Jose.png";
 import carlos from "@/public/img/kg/teams/Carlos.png";
 import mario from "@/public/img/kg/teams/Mario.png";
+import clara from "@/public/img/kg/teams/clara.png";
+import nancy from "@/public/img/kg/teams/nancy.png";
+import mayra from "@/public/img/kg/teams/mayra.png";
+import roberto from "@/public/img/kg/teams/roberto.png";
 
 const team = [
   {
@@ -79,6 +83,26 @@ const team = [
     image: mario,
     name: "Mario Ascon",
     position: "Delivery Executive",
+  },
+  {
+    image: clara,
+    name: "Clara Garcia",
+    position: "Screen Printing Specialist",
+  },
+  {
+    image: nancy,
+    name: "Nancy Carolina",
+    position: "Screen Printing Specialist",
+  },
+  {
+    image: mayra,
+    name: "Mayra Rosales",
+    position: "Screen Printing Specialist",
+  },
+  {
+    image: roberto,
+    name: "Roberto Bernardo Solorio",
+    position: "Screen Printing Specialist",
   },
 ];
 
