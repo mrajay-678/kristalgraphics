@@ -101,7 +101,7 @@ const team = [
   },
   {
     image: roberto,
-    name: "Roberto Bernardo Solorio",
+    name: "Roberto Solorio",
     position: "Screen Printing Specialist",
   },
 ];

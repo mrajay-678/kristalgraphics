@@ -22,13 +22,15 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
       <FooterMobile />
 
       <div className="hidden md:block">
-        <div className="mx-auto grid-container px-8 md:px-32">
-          <div className="md:w-2/4 ms-auto pb-6 px-[1.5rem] mxd-hero-03__header mb-8">
-            <Image
-              src={blacknimonics}
-              alt="Black Monics"
-              className="w-5/12 ms-auto"
-            />
+        <div className="relative mx-auto grid-container pt-10 px-8 md:px-32 gap-16">
+          <div className=" ms-auto max-w-[1920px] mxd-hero-03__header flex mxd-hero-03__header mx-auto mb-10 px-[1.5rem] justify-end items-end">
+            <div className="w-2/4">
+              <Image
+                src={blacknimonics}
+                alt="Black Monics"
+                className="w-5/12 ms-auto"
+              />
+            </div>
           </div>
         </div>
         {/* Main Content */}
