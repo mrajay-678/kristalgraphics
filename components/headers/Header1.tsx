@@ -45,6 +45,7 @@ export default function Header1() {
     { name: "Home", path: "/" },
     { name: "Services", path: "/service" },
     // { name: "Portfolio", path: "/portfolio" },
+    { name: "Equipment", path: "/equipment" },
     { name: "About us", path: "/about-us" },
     {
       name: "Promo Products",
@@ -54,7 +55,7 @@ export default function Header1() {
   const MobileLinks = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/service" },
-    // { name: "Portfolio", path: "/portfolio" },
+    { name: "Equipment", path: "/equipment" },
     { name: "About us", path: "/about-us" },
     {
       name: "Promo Products",
