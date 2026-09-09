@@ -23,7 +23,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
 
       <div className="hidden md:block">
         <div className="relative mx-auto grid-container pt-10 px-8 md:px-32 gap-16">
-          <div className=" ms-auto max-w-[1920px] mxd-hero-03__header flex mxd-hero-03__header mx-auto mb-10 px-[1.5rem] justify-end items-end">
+          <div className=" ms-auto max-w-[1920px] mxd-hero-03__header flex mxd-hero-03__header mx-auto mb-10 !px-[0rem] justify-end items-end">
             <div className="w-2/4">
               <Image
                 src={blacknimonics}
@@ -36,7 +36,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
         {/* Main Content */}
         <div className="relative mx-auto grid-container pt-10 px-8 md:px-32 gap-16 pb-20  lg:flex-row lg:items-end lg:gap-10 bg-[#181818]">
           {/* Left Content */}
-          <div className="flex max-w-[1920px] mxd-hero-03__header mx-auto mb-40 px-[1.5rem] justify-between items-end">
+          <div className="flex max-w-[1920px] mxd-hero-03__header mx-auto mb-40 !px-[0rem] justify-between items-end">
             <h2 className="font-heading text-4xl font-light leading-normal text-white w-6/12 sm:text-5xl md:text-6xl lg:text-[5vw]">
               Ready to print merch at scale?
             </h2>
@@ -50,14 +50,14 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
           </div>
 
           {/* Right Content */}
-          <div className="flex max-w-[1920px] mxd-hero-03__header mx-auto px-[1.5rem] items-start lg:items-end flex-col gap-6 lg:flex-row lg:justify-between pt-20 lg:pt-72">
+          <div className="flex max-w-[1920px] mxd-hero-03__header mx-auto !px-[0rem] items-start lg:items-end flex-col gap-6 lg:flex-row lg:justify-between pt-20 lg:pt-72">
             <Link href={"/get-a-quote"}>
               <h3 className="font-heading font-medium text-white sm:text-7xl md:text-7xl lg:text-[5vw] hover:text-[#FEBB12]">
                 Get a <span className="">quote!</span>
               </h3>
             </Link>
             {/* Address */}
-            <div className="flex md:flex-wrap flex-col lg:flex-row gap-5 md:w-6/12 justify-between md:items-end">
+            <div className="flex md:flex-wrap flex-col lg:flex-row gap-5 md:w-7/12 justify-between md:items-end">
               <div className="flex md:w-3/12 flex-col items-center gap-2">
                 <Image
                   className="footer-logo-1"
@@ -109,7 +109,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
               </div>
             </div>
           </div>
-          <div className="max-w-[1920px] mxd-hero-03__header mx-auto px-[1.5rem] mt-20">
+          <div className="max-w-[1920px] mxd-hero-03__header mx-auto !px-[0rem] mt-20">
             <div className="flex flex-col gap-6 border-t border-white/30 pt-8 md:flex-row md:items-end md:justify-between">
               <div className="font-body text-sm text-white sm:text-2xl lg:text-xl">
                 <div className="w-6/12 flex flex-row justify-start items-center gap-4 pb-5">
@@ -155,7 +155,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
                 </p>
               </div>
 
-              <div className="flex flex-wrap lg:flex-row gap-5 max-w-6/12 md:w-6/12 justify-between items-end">
+              <div className="flex flex-wrap lg:flex-row gap-5 max-w-6/12 md:w-7/12 justify-between items-end">
                 <div className="w-3/12"></div>
                 <div className="w-3/12">
                   <ul>
