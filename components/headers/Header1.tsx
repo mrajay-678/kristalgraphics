@@ -110,7 +110,8 @@ export default function Header1() {
             <li key={link.path} className="relative group">
               <Link
                 href={link.path}
-                className={`mxd-header__nav-link relative pb-1 text-3xl transition-all duration-300 inline-flex items-center gap-2 ${
+
+                className={`mxd-header__nav-link hover:font-bold relative pb-1 text-3xl transition-all duration-300 inline-flex items-center  gap-2 ${
                   pathname === link.path ||
                   link.dropdown?.some((item) => pathname === item.path)
                     ? "border-b-2 border-[#FEBB12] font-bold"
