@@ -12,40 +12,46 @@ export const page = () => {
       <section className="pt-60">
         <TimelineSection />
       </section>
-      <section
-        id="about"
-        className="lg:flex max-w-[1920px] mxd-hero-03__header mx-auto px-[1.5rem] gap-20"
-      >
-        <div className="lg:w-2/4">
-          <Image src={aboutOne} alt="Murtuza" className="object-cover h-3/4" />
-          <div className="pt-20">
-            <p className="text-5xl font-thin font-body">
-              For four decades, we&apos;ve partnered with businesses, event
-              planners, agencies, and brands who need reliable quality and
-              honest timelines. With an in-house design team for support, we
-              don&apos;t just print what you ask for, we guide you to what
-              actually works for your project, budget, and goals.
-            </p>
+      <section className="main-width">
+        <div
+          id="about"
+          className="lg:flex max-w-[1920px] mxd-hero-03__header mx-auto !px-[0rem] gap-20"
+        >
+          <div className="lg:w-2/4">
+            <Image
+              src={aboutOne}
+              alt="Murtuza"
+              className="object-cover h-3/4"
+            />
+            <div className="pt-20">
+              <p className="text-5xl font-thin font-body">
+                For four decades, we&apos;ve partnered with businesses, event
+                planners, agencies, and brands who need reliable quality and
+                honest timelines. With an in-house design team for support, we
+                don&apos;t just print what you ask for, we guide you to what
+                actually works for your project, budget, and goals.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="lg:w-2/4">
-          <div className="pb-20">
-            <p className="pb-10 text-5xl font-thin font-body">
-              Kristal Graphics has been around since 1977. Trusted for our
-              quality, partnered with for our expertise.
-            </p>
-            <p className="text-5xl font-thin font-body">
-              What started as a small print shop in Los Angeles has grown into a
-              full-service production house offering screen printing,
-              embroidery, DTF transfers, labels, packaging, and promotional
-              products. All made in-house by skilled union workers.
-            </p>
+          <div className="lg:w-2/4">
+            <div className="pb-20">
+              <p className="pb-10 text-5xl font-thin font-body">
+                Kristal Graphics has been around since 1977. Trusted for our
+                quality, partnered with for our expertise.
+              </p>
+              <p className="text-5xl font-thin font-body">
+                What started as a small print shop in Los Angeles has grown into
+                a full-service production house offering screen printing,
+                embroidery, DTF transfers, labels, packaging, and promotional
+                products. All made in-house by skilled union workers.
+              </p>
+            </div>
+            <Image
+              src={aboutTwo}
+              alt="Murtuza"
+              className="object-contain h-3/4"
+            />
           </div>
-          <Image
-            src={aboutTwo}
-            alt="Murtuza"
-            className="object-contain h-3/4"
-          />
         </div>
       </section>
       <Approch />

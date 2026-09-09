@@ -37,8 +37,8 @@ export default function Capabilities() {
   };
 
   return (
-    <div className="overflow-hidden mxd-section padding-grid-pre-pinned">
-      <div className="mxd-container grid-container">
+    <div className="overflow-hidden mxd-section main-width padding-grid-pre-pinned">
+      <div className="max-w-[1920px] mxd-hero-03__header mx-auto !px-[0rem]">
         {/* Block - Section Title Start */}
         <div className="mxd-block">
           <div className="mxd-section-title">

@@ -17,7 +17,7 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
   return (
     <footer
       id="mxd-footer"
-      className="mt-24 md:mt-32 lg:mt-52 lg:min-h-screen flex flex-col justify-end gap-2 md:gap-10"
+      className="lg:min-h-screen flex flex-col justify-end gap-2 md:gap-10"
     >
       <FooterMobile />
 

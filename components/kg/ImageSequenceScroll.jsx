@@ -87,8 +87,8 @@ const ImageSequenceScroll = () => {
 
   return (
     <section className="mid-animation pb-52">
-      <div>
-        <div className="flex flex-col md:flex-row justify-between mx-auto mxd-container grid-container">
+      <div className="main-width">
+        <div className="flex flex-col md:flex-row justify-between max-w-[1920px] mxd-hero-03__header mx-auto !px-[0rem]">
           <div className="flex flex-col md:w-2/4 gap-2 md:gap-5 pb-10 md:pb-52">
             <div className="flex items-center gap-7">
               <RevealText className="reveal-type">

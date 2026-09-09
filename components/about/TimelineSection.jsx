@@ -104,6 +104,7 @@ export default function Timeline() {
 
   // ---- animate to index ----
   const goTo = (index) => {
+    if (!containerRef.current) return;
     if (index < 0 || index >= years.length) return;
 
     const progress = index / (years.length - 1);

@@ -108,33 +108,35 @@ const team = [
 
 const Teams = () => {
   return (
-    <section className="container mx-auto pt-20 lg:pb-52">
-      <div className="mxd-section-title__hrtitle anim-uni-in-up">
-        <RevealText
-          as="h2"
-          className="font-light reveal-type font-heading text-9xl mb-20"
-        >
-          Meet the team
-        </RevealText>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-20 pb-24">
-        {team.map((member, i) => (
-          <div key={i} className="mb-20 relative">
-            <Image
-              src={member.image}
-              alt={member.name}
-              className="w-full h-auto"
-            />
-            <div className="absolute bottom-10 left-8 p-4">
-              <h3 className="font-heading text-5xl leading-none text-white w-2/4 mb-4">
-                {member.name}
-              </h3>
-              <p className="font-heading  text-3xl font-light text-[#febb12]">
-                {member.position}
-              </p>
+    <section className="main-width">
+      <div className="max-w-[1920px] mxd-hero-03__header mx-auto !px-[0rem] !pt-20 !lg:pb-52">
+        <div className="mxd-section-title__hrtitle anim-uni-in-up">
+          <RevealText
+            as="h2"
+            className="font-light reveal-type font-heading text-9xl mb-20"
+          >
+            Meet the team
+          </RevealText>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-20 pb-24">
+          {team.map((member, i) => (
+            <div key={i} className="mb-20 relative">
+              <Image
+                src={member.image}
+                alt={member.name}
+                className="w-full h-auto"
+              />
+              <div className="absolute bottom-10 left-8 p-4">
+                <h3 className="font-heading text-5xl leading-none text-white w-2/4 mb-4">
+                  {member.name}
+                </h3>
+                <p className="font-heading  text-3xl font-light text-[#febb12]">
+                  {member.position}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -80,6 +80,7 @@ export default function Header1() {
         transition-all
         duration-500
         ease-[cubic-bezier(0.4,0,0.2,1)]
+        main-width
         ${
           isSticky
             ? "fixed top-0 bg-white/40 backdrop-blur-md"
@@ -89,7 +90,7 @@ export default function Header1() {
         ${isSticky ? "py-10" : "py-5"}
       `}
     >
-      <div className="flex items-center justify-between max-w-[1920px] mxd-container grid-container !pt-10 mxd-hero-03__header mx-auto px-[1.5rem]">
+      <div className="flex items-center justify-between max-w-[1920px] mxd-hero-03__header mx-auto !px-[0rem]">
         {/* Logo */}
         <div className="mxd-header__logo loading__fade">
           <Link href="/" className="mxd-logo">

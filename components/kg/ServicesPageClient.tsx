@@ -7,8 +7,8 @@ import { services } from "@/data/kg/services";
 
 const ServicesPageClient = () => {
   return (
-    <main className="pt-32 md:pt-60">
-      <div className="max-w-[1920px] mxd-hero-03__header mx-auto px-[1.5rem]">
+    <main className="pt-32 md:pt-60 main-width">
+      <div className="max-w-[1920px] mxd-hero-03__header mx-auto !px-[0rem]">
         <ServiceHero />
         <div className="relative font-inter antialiased">
           <div className="relative min-h-screen overflow-hidde">

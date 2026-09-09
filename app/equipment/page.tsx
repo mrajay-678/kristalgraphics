@@ -63,8 +63,8 @@ const equipment: BentoItem[] = [
 
 export default function PortfolioPage() {
   return (
-    <main className="px-4 text-black pt-60">
-      <section className="container mx-auto">
+    <main className="text-black pt-60 main-width">
+      <section className="max-w-[1920px] mxd-hero-03__header mx-auto !px-[0rem]">
         <div className="mb-14">
           <h1 className="font-heading text-7xl leading-none md:text-9xl">
             Our Equipment
@@ -84,6 +84,7 @@ export default function PortfolioPage() {
             md:flex
             flex-wrap
             justify-between
+            
           "
         >
           {equipment.map((item) => (

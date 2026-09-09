@@ -5,8 +5,8 @@ import { approach1 } from "@/data/approach.json";
 import RevealText from "../animation/RevealText";
 export default function Approch() {
   return (
-    <div className="mxd-section padding-pre-grid mobile-grid-s pt-52">
-      <div className="max-w-[1920px] mxd-hero-03__header mx-auto px-[1.5rem]">
+    <div className="main-width padding-pre-grid mobile-grid-s pt-52">
+      <div className="max-w-[1920px] mxd-hero-03__header mx-auto !px-[0rem]">
         {/* Block - Section Title Start */}
         <div className="mxd-block">
           <div className="mxd-section-title">

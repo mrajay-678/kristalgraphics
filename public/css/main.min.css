@@ -21095,3 +21095,7 @@ html {
     width: 100%;
   }
 }
+
+.main-width {
+  @apply mx-auto grid-container pt-10 px-8 md:px-32 pb-20;
+}

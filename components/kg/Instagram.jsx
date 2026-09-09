@@ -28,8 +28,8 @@ const fallbackPosts = [
 
 export default function Instagram() {
   return (
-    <section className="mxd-container grid-container py-16 md:py-24">
-      <div className="flex flex-col gap-8 lg:flex-row lg:items-end">
+    <section className="main-width py-16 md:py-24">
+      <div className="flex flex-col gap-8 lg:flex-row lg:items-end max-w-[1920px] mxd-hero-03__header mx-auto !px-[0rem] !pb-12 !md:pb-20">
         <h2 className="lg:w-6/12 font-heading text-7xl">
           We&apos;re highly <br />
           (almost incurably) social!
@@ -43,7 +43,7 @@ export default function Instagram() {
         </p>
       </div>
 
-      <div className="pt-12 md:pt-20">
+      <div className="max-w-[1920px] mxd-hero-03__header mx-auto !px-[0rem] ">
         <Swiper
           spaceBetween={20}
           breakpoints={{
