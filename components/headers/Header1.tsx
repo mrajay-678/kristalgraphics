@@ -62,7 +62,10 @@ export default function Header1() {
     {
       name: "About us",
       path: "/about-us",
-      dropdown: [{ name: "Equipment", path: "/equipment" }],
+      dropdown: [
+        { name: "Equipment", path: "/equipment" },
+        { name: "Campaign", path: "/campaign" },
+      ],
     },
     {
       name: "Promo Products",
