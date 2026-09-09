@@ -6,8 +6,8 @@ import AnimatedButton from "../animation/AnimatedButton";
 
 export default function Cta() {
   return (
-    <div className="mxd-section overflow-hidden">
-      <div className="mxd-container">
+    <div className="mxd-section overflow-hidden main-width">
+      <div className="max-w-[1920px] mxd-hero-03__header mx-auto !px-[0rem]">
         {/* Block - CTA Start */}
         <div className="mxd-block">
           <div className="mxd-promo">
@@ -17,47 +17,22 @@ export default function Cta() {
               {/* caption */}
               <div className="mxd-promo__content">
                 <p className="mxd-promo__title anim-uni-in-up">
-                  <span className="mxd-promo__icon">
-                    <Image
-                      alt="Icon"
-                      src="/img/icons/300x300_obj-cta-01.webp"
-                      width={300}
-                      height={300}
-                    />
-                  </span>
                   <RevealText
                     as="span"
-                    className="mxd-promo__caption reveal-type"
+                    className="mxd-promo__caption font-heading reveal-type"
                   >
-                    Let&apos;s talk about your project!
+                    Avail 20% off on bulk orders!
                   </RevealText>
                 </p>
                 <div className="mxd-promo__controls anim-uni-in-up">
                   <AnimatedButton
-                    text="Contact Me"
-                    className="btn btn-anim btn-default btn-large btn-additional slide-right-up"
-                    href={`/contact`}
+                    text="Get a free consultation"
+                    className="btn btn-anim btn-default btn-large !bg-[#FEBB12] slide-right-up"
+                    href={`tel:+18183427822`}
                   >
                     <i className="ph-bold ph-arrow-up-right" />
                   </AnimatedButton>
                 </div>
-              </div>
-              {/* parallax images */}
-              <div className="mxd-promo__images">
-                <Image
-                  className="promo-image promo-image-1"
-                  alt="Image"
-                  src="/img/illustrations/cta-img-01.webp"
-                  width={800}
-                  height={912}
-                />
-                <Image
-                  className="promo-image promo-image-2"
-                  alt="Image"
-                  src="/img/illustrations/cta-img-02.webp"
-                  width={600}
-                  height={601}
-                />
               </div>
             </div>
           </div>

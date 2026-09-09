@@ -2,49 +2,57 @@
   "projects1": [
     {
       "id": 1,
-      "title": "Creative studio",
-      "description": "template for modern agencies",
+      "title": "T-shirts",
+      "description": "Equip your team with screen-printed or DTF-printed tees – the latter has no minimums!",
       "previewClass": "preview-image-1",
       "tags": ["UI/UX", "Web design", "Illustrations"],
       "anim": "anim-uni-in-up"
     },
     {
       "id": 2,
-      "title": "Interactive concept",
-      "description": "powered by AI",
+      "title": "Buttons",
+      "description": "A little symbol precision-pressed on-site, ready in bulk for fast turnaround.",
       "previewClass": "preview-image-2",
       "tags": ["Sora", "AI", "Editorial"],
       "anim": "anim-uni-in-up"
     },
     {
       "id": 3,
-      "title": "Mobile app design",
-      "description": "for a cross-platform solution",
+      "title": "Yard Signs",
+      "description": "A reminder in your yard that is weatherproof and built to stay sharp through the whole campaign season.",
       "previewClass": "preview-image-3",
       "tags": ["UI/UX", "Design", "Android"],
       "anim": ""
     },
     {
       "id": 4,
-      "title": "NFT project",
-      "description": "branding",
+      "title": "Totes",
+      "description": "Your supporters will carry it everywhere! We can print it with your brand colors, and in bulk.",
       "previewClass": "preview-image-4",
       "tags": ["Brand identity", "Style guides"],
       "anim": "anim-uni-in-up"
     },
     {
       "id": 5,
-      "title": "Illustrations set",
-      "description": "for digital and print use.",
+      "title": "Mugs",
+      "description": "Let every morning on the campaign trail be a reminder. We have mugs printed with durable UV-DTF stickers that last. ",
       "previewClass": "preview-image-5",
       "tags": ["Illustrations", "Design", "Packaging"],
       "anim": "anim-uni-in-up"
     },
     {
       "id": 6,
-      "title": "VR Vision",
-      "description": "experience concept",
+      "title": "Magnets",
+      "description": "Visibility for your movement. UV-coated magnets for color that stays bold rain or shine.",
       "previewClass": "preview-image-6",
+      "tags": ["Midjourney", "AI Model"],
+      "anim": "anim-uni-in-up"
+    },
+    {
+      "id": 7,
+      "title": "Caps",
+      "description": "Supporters can hold their heads high with pride. We custom embroider your message on caps with precision.",
+      "previewClass": "preview-image-7",
       "tags": ["Midjourney", "AI Model"],
       "anim": "anim-uni-in-up"
     }

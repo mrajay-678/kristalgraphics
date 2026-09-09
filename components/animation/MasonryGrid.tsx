@@ -28,6 +28,10 @@ export default function MasonryGrid({
         const isotope = new Isotope(isotopContainer.current, {
           itemSelector: itemSelector,
           layoutMode: "masonry", // or 'fitRows', depending on your layout needs
+          masonry: {
+            columnWidth: itemSelector,
+            gutter: 0,
+          },
         });
         imagesloaded(isotopContainer.current).on("progress", function () {
           // Trigger Isotope layout
