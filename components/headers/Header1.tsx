@@ -6,9 +6,8 @@ import AnimatedButton from "../animation/AnimatedButton";
 import { usePathname } from "next/navigation";
 import ThemeSwitcherButton from "./ColorSwitcher";
 import Image from "next/image";
-
 import logo from "@/public/img/kg/Vector.svg";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 
 export default function Header1() {
   const pathname = usePathname();
@@ -44,9 +43,11 @@ export default function Header1() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/service" },
-    // { name: "Portfolio", path: "/portfolio" },
-    { name: "Equipment", path: "/equipment" },
-    { name: "About us", path: "/about-us" },
+    {
+      name: "About us",
+      path: "/about-us",
+      dropdown: [{ name: "Equipment", path: "/equipment" }],
+    },
     {
       name: "Promo Products",
       path: "https://www.promoplace.com/kristalgraphics",
@@ -55,8 +56,11 @@ export default function Header1() {
   const MobileLinks = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/service" },
-    { name: "Equipment", path: "/equipment" },
-    { name: "About us", path: "/about-us" },
+    {
+      name: "About us",
+      path: "/about-us",
+      dropdown: [{ name: "Equipment", path: "/equipment" }],
+    },
     {
       name: "Promo Products",
       path: "https://www.promoplace.com/kristalgraphics",
@@ -101,19 +105,66 @@ export default function Header1() {
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden items-center text-center justify-evenly gap-20  xl:flex">
+        <ul className="hidden items-center text-center justify-evenly gap-20 xl:flex">
           {navLinks.map((link) => (
-            <li key={link.path}>
+            <li key={link.path} className="relative group">
               <Link
                 href={link.path}
-                className={`mxd-header__nav-link relative pb-1 text-3xl transition-all duration-300 ${
-                  pathname === link.path
+                className={`mxd-header__nav-link relative pb-1 text-3xl transition-all duration-300 inline-flex items-center gap-2 ${
+                  pathname === link.path ||
+                  link.dropdown?.some((item) => pathname === item.path)
                     ? "border-b-2 border-[#FEBB12] font-bold"
                     : ""
                 }`}
               >
                 {link.name}
+
+                {link.dropdown && (
+                  <ChevronDown
+                    size={24}
+                    strokeWidth={2}
+                    className="transition-transform duration-300 group-hover:rotate-180"
+                  />
+                )}
               </Link>
+
+              {/* Dropdown */}
+              {link.dropdown && (
+                <div
+                  className="
+            absolute left-1/2 top-full z-50
+            mt-4 min-w-[150px]
+            -translate-x-1/2
+            rounded-xl
+            p-3
+            opacity-0
+            invisible
+            translate-y-2
+            transition-all
+            duration-300
+            group-hover:visible
+            group-hover:opacity-100
+            group-hover:translate-y-0
+          "
+                >
+                  {link.dropdown.map((item) => (
+                    <Link
+                      key={item.path}
+                      href={item.path}
+                      className={`
+                block rounded-lg px-5 py-3
+                text-left text-3xl
+                transition-all duration-300
+                hover:text-black
+                hover:font-bold
+                ${pathname === item.path ? "font-bold text-black" : "text-black"}
+              `}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </li>
           ))}
         </ul>
@@ -156,12 +207,32 @@ export default function Header1() {
                 <Link
                   href={link.path}
                   onClick={() => setMobileMenu(false)}
-                  className={`block text-3xl text-light transition-all text-white duration-300 ${
+                  className={`block text-3xl text-light text-white transition-all duration-300 ${
                     pathname === link.path ? "font-bold text-[#FEBB12]" : ""
                   }`}
                 >
                   {link.name}
                 </Link>
+
+                {link.dropdown && (
+                  <div className="mt-3 ml-5 border-l-2 border-[#FEBB12] pl-4">
+                    {link.dropdown.map((item) => (
+                      <Link
+                        key={item.path}
+                        href={item.path}
+                        onClick={() => setMobileMenu(false)}
+                        className={`
+                block py-2 text-2xl text-white
+                transition-all duration-300
+                hover:text-[#FEBB12]
+                ${pathname === item.path ? "font-bold text-[#FEBB12]" : ""}
+              `}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </li>
             ))}
           </ul>
