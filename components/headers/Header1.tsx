@@ -55,7 +55,7 @@ export default function Header1() {
       name: "Promo Products",
       path: "https://www.promoplace.com/kristalgraphics",
     },
-    { name: "Campaign Merch!", path: "/campaign" },
+    { name: "Campaign Merch!", path: "/campaignmerch" },
   ];
   const MobileLinks = [
     { name: "Home", path: "/" },
@@ -65,14 +65,14 @@ export default function Header1() {
       path: "/about-us",
       dropdown: [
         { name: "Equipment", path: "/equipment" },
-        // { name: "Campaign", path: "/campaign" },
+        // { name: "Campaign", path: "/campaignmerch" },
       ],
     },
     {
       name: "Promo Products",
       path: "https://www.promoplace.com/kristalgraphics",
     },
-    { name: "Campaign Merch!", path: "/campaign" },
+    { name: "Campaign Merch!", path: "/campaignmerch" },
     { name: "Get a quote", path: "/get-a-quote" },
   ];
 
