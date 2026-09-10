@@ -20,7 +20,7 @@ export default function PortfolioMasonry() {
                 itemSelector=".mxd-projects-masonry__item"
               >
                 {/* portfolio gallery title */}
-                <div className="w-full md:w-2/4 mxd-projects-masonry__item mxd-projects-masonry__title headline-title">
+                <div className="w-full md:w-2/4 mxd-projects-masonry__item mxd-projects-masonry__title headline-title !px-0">
                   <div className="mxd-block__inner-headline">
                     <h1 className="inner-headline__title font-heading headline-img-before headline-img-07">
                       From Signs to Swag
@@ -36,20 +36,13 @@ export default function PortfolioMasonry() {
                     key={index}
                     className="w-full md:w-[calc(50%-100px)] mxd-project-item mxd-projects-masonry__item [&:nth-child(even)]:!left-auto [&:nth-child(even)]:!right-0  !p-0"
                   >
-                    <Link
-                      className="mxd-project-item__media masonry-media"
-                      href={`/project-details`}
-                    >
-                      <BackgroundParallax
-                        className={`mxd-project-item__preview masonry-preview ${item.previewClass} parallax-img-small`}
-                      />
-                    </Link>
-                    <div className="mxd-project-item__promo masonry-promo">
-                      <div className="mxd-project-item__name">
-                        <Link href={`/project-details`}>
-                          <strong>{item.title}</strong> <br />{" "}
-                          {item.description}
-                        </Link>
+                    <BackgroundParallax
+                      className={`mxd-project-item__preview masonry-preview rounded-xl ${item.previewClass} parallax-img-small`}
+                    />
+                    <div className="mxd-project-item__promo masonry-promo !px-0">
+                      <div className="mxd-project-item__name pt-10 text-4xl">
+                        <strong className="text-5xl">{item.title}</strong>{" "}
+                        <br /> {item.description}
                       </div>
                     </div>
                   </div>

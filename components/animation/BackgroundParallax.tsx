@@ -48,9 +48,11 @@ const BackgroundParallax = <T extends HtmlTag = "div">({
   }, [scale, speed, willChange, wrapperClass]);
 
   return (
-    <Tag ref={elRef} className={className}>
-      {children}
-    </Tag>
+    <div className="rounded-xl">
+      <Tag ref={elRef} className={className} style={{ borderRadius: "4rem" }}>
+        {children}
+      </Tag>
+    </div>
   );
 };
 

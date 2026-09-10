@@ -6249,7 +6249,7 @@ form textarea:required:valid {
   -moz-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-image: url(/img/campaign/bg.jpg);
+  background-image: url(/img/campaign/bg1.jpg);
   background-color: unset;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6357,18 +6357,18 @@ form textarea:required:valid {
   }
 }
 .mxd-promo__caption {
-  font: normal var(--fw-medium) 4.4rem/1.1 var(--_font-accent);
+  font: normal var(--fw-medium) 2.4rem/1.1 var(--_font-accent);
   letter-spacing: -0.06rem;
   color: var(--t-bright);
 }
 @media only screen and (min-width: 768px) {
   .mxd-promo__caption {
-    font-size: 8rem;
+    font-size: 10rem;
   }
 }
 @media only screen and (min-width: 1400px) {
   .mxd-promo__caption {
-    font-size: 10rem;
+    font-size: 14rem;
   }
 }
 .mxd-promo__images {

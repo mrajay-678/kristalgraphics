@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 import RevealText from "../animation/RevealText";
 import AnimatedButton from "../animation/AnimatedButton";
@@ -16,12 +17,12 @@ export default function Cta() {
               <div className="mxd-promo__bg" />
               {/* caption */}
               <div className="mxd-promo__content">
-                <p className="mxd-promo__title anim-uni-in-up">
+                <p className=" anim-uni-in-up">
                   <RevealText
                     as="span"
-                    className="mxd-promo__caption font-heading reveal-type"
+                    className="mxd-promo__caption !text-white font-heading reveal-type "
                   >
-                    Avail 20% off on bulk orders!
+                    Avail 20% off on <br /> bulk orders!
                   </RevealText>
                 </p>
                 <div className="mxd-promo__controls anim-uni-in-up">
@@ -31,6 +32,7 @@ export default function Cta() {
                     href={`tel:+18183427822`}
                   >
                     <i className="ph-bold ph-arrow-up-right" />
+                    <ArrowUpRight />
                   </AnimatedButton>
                 </div>
               </div>
