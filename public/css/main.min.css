@@ -1020,7 +1020,7 @@ html.lenis body {
     padding-top: 13.6rem;
   }
   .mxd-section-inner-headline.grid-headline {
-    padding-top: 16rem;
+    padding-top: 8rem;
   }
 }
 @media only screen and (min-width: 1600px) {
@@ -1028,7 +1028,7 @@ html.lenis body {
     padding-top: 17rem;
   }
   .mxd-section-inner-headline.grid-headline {
-    padding-top: 20rem;
+    padding-top: 10rem;
   }
 }
 .mxd-section-inner-headline.padding-default {
@@ -6363,12 +6363,12 @@ form textarea:required:valid {
 }
 @media only screen and (min-width: 768px) {
   .mxd-promo__caption {
-    font-size: 10rem;
+    font-size: 8rem;
   }
 }
 @media only screen and (min-width: 1400px) {
   .mxd-promo__caption {
-    font-size: 14rem;
+    font-size: 12rem;
   }
 }
 .mxd-promo__images {

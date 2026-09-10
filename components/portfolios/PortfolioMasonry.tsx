@@ -20,10 +20,10 @@ export default function PortfolioMasonry() {
                 itemSelector=".mxd-projects-masonry__item"
               >
                 {/* portfolio gallery title */}
-                <div className="w-full md:w-2/4 mxd-projects-masonry__item mxd-projects-masonry__title headline-title !px-0">
+                <div className="w-full md:w-2/4 mxd-projects-masonry__item mxd-projects-masonry__title headline-title translate-y-[-10%] !px-0">
                   <div className="mxd-block__inner-headline">
-                    <h1 className="inner-headline__title font-heading headline-img-before headline-img-07">
-                      From Signs to Swag
+                    <h1 className="inner-headline__title font-heading headline-img-before headline-img-07 leading-[1]">
+                      From signs to swag
                     </h1>
                     <p className="font-body text-5xl pt-20">
                       Proudly Printed by Union Workers for your Campaign
@@ -40,9 +40,11 @@ export default function PortfolioMasonry() {
                       className={`mxd-project-item__preview masonry-preview rounded-xl ${item.previewClass} parallax-img-small`}
                     />
                     <div className="mxd-project-item__promo masonry-promo !px-0">
-                      <div className="mxd-project-item__name pt-10 text-4xl">
-                        <strong className="text-5xl">{item.title}</strong>{" "}
-                        <br /> {item.description}
+                      <div className="mxd-project-item__name pt-10 text-4xl ">
+                        <strong className="text-7xl">{item.title}</strong>{" "}
+                        <br />
+                        <br />
+                        <p className="font-body text-5xl">{item.description}</p>
                       </div>
                     </div>
                   </div>
