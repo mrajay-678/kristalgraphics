@@ -1372,6 +1372,7 @@ html.lenis body {
   position: relative;
 }
 .inner-headline__title.headline-img-before::before {
+  display: none;
   content: "";
   display: inline-block;
   width: 8rem;
@@ -1399,6 +1400,7 @@ html.lenis body {
 }
 @media only screen and (min-width: 768px) {
   .inner-headline__title.headline-img-before::before {
+    display: none;
     width: 11rem;
     height: 5.8rem;
     margin-right: 2.2rem;
@@ -1411,6 +1413,7 @@ html.lenis body {
 }
 @media only screen and (min-width: 1200px) {
   .inner-headline__title.headline-img-before::before {
+    display: none;
     width: 14rem;
     height: 7rem;
     margin-right: 2.6rem;
@@ -1423,6 +1426,7 @@ html.lenis body {
 }
 @media only screen and (min-width: 1600px) {
   .inner-headline__title.headline-img-before::before {
+    display: none;
     width: 16rem;
     height: 8.4rem;
     margin-right: 3.3rem;
