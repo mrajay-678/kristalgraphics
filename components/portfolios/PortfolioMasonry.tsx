@@ -23,7 +23,7 @@ export default function PortfolioMasonry() {
                 <div className="w-full md:w-2/4 mxd-projects-masonry__item mxd-projects-masonry__title headline-title">
                   <div className="mxd-block__inner-headline">
                     <h1 className="inner-headline__title font-heading headline-img-before headline-img-07">
-                      From Signs <br /> to Swag
+                      From Signs to Swag
                     </h1>
                     <p className="font-body text-5xl pt-20">
                       Proudly Printed by Union Workers for your Campaign
