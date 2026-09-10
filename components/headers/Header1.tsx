@@ -48,7 +48,7 @@ export default function Header1() {
       path: "/about-us",
       dropdown: [
         { name: "Equipment", path: "/equipment" },
-        { name: "Campaign", path: "/campaign" },
+        // { name: "Campaign", path: "/campaign" },
       ],
     },
     {
@@ -64,7 +64,7 @@ export default function Header1() {
       path: "/about-us",
       dropdown: [
         { name: "Equipment", path: "/equipment" },
-        { name: "Campaign", path: "/campaign" },
+        // { name: "Campaign", path: "/campaign" },
       ],
     },
     {
