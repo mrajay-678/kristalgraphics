@@ -20,7 +20,7 @@ export default function Cta() {
                 <p className=" anim-uni-in-up">
                   <RevealText
                     as="span"
-                    className="mxd-promo__caption !text-white font-heading reveal-type font-heading"
+                    className="mxd-promo__caption !text-white !font-heading reveal-type "
                   >
                     Avail 20% off on <br /> bulk orders!
                   </RevealText>
