@@ -55,6 +55,7 @@ export default function Header1() {
       name: "Promo Products",
       path: "https://www.promoplace.com/kristalgraphics",
     },
+    { name: "Campaign Merch!", path: "/campaign" },
   ];
   const MobileLinks = [
     { name: "Home", path: "/" },
@@ -71,6 +72,7 @@ export default function Header1() {
       name: "Promo Products",
       path: "https://www.promoplace.com/kristalgraphics",
     },
+    { name: "Campaign Merch!", path: "/campaign" },
     { name: "Get a quote", path: "/get-a-quote" },
   ];
 
