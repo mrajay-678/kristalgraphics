@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title:
     "Campaign Merch! || From signs to swag",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "From signs to swag",
 };
 export default function WorksMasonryPage() {
   return (
