@@ -5,7 +5,7 @@ import PortfolioMasonry from "@/components/portfolios/PortfolioMasonry";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Work Masonry || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Campaign Merch! || From signs to swag",
   description:
     "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
 };
